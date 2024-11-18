@@ -1,0 +1,126 @@
+======== vzfle.def (v1.6) ========
+
+* Text windows
+
+"Rename:",13
+"Makedir:",13
+"DOS Command: <$pd>",40
+"$pm: <$pd>",40
+"$pm to:",20
+
+* System menus
+
+5	"",13,10
+	"W *.*"
+	"Q ."
+	"C .h .c"
+	"S .inc .asm"
+	"E .exe .com"
+	"D .doc .txt"
+	"T <Text>"
+	"B <Binary>"
+	"A <Archive>"
+	"H <Hidden>"
+
+6	"",11,7	"Filename"  "Ext" "New" "Old" "Large" "Small" "Directory"
+7	"",10,6	"Compare" "Exist" "New" "Old" "Large" "Small"
+
+8	"",10,9
+	"Copy	copy %1 %2"
+	"Delete	del "
+	"Pack	%!lha a %2%F %@3"
+	"Unpack	%!lha x %1 %2%G%\"
+	"View	%!lha l "
+	"Fc	fca %1 %2"
+	"Test	dir "
+	"eXec cmd	%1 %2"
+	"Exec	%1 %2"
+
+9	"",0,7
+	"com"
+	"exe"
+	"BAT"
+	"lzh %!lha l "
+	"LZH lha x "
+	"bdf %!bupdate -v "
+	"BDF %!bupdate -o "
+
+11	"VZPATH",20,0
+
+12	"Attribute",11,5
+	"Read only"
+	"Hidden"
+	"System"
+	"Archive"
+	"OK"
+
+13	"",10,8
+	"Copy	%!zcopy %[/s] %@1 %2%G"
+	"Move		%!zcopy %[/s] /m %@1 %2%G"
+	"Delete"	,#D
+	"Rename"	,#R
+	"Attribute"	,#A
+	"maKedir"	,#K
+	"New file"	,#N
+	"FD		%!%^FD"
+
+* Macro
+
+1 "!Filer"
+	(r)??.
+	(r==':'||r=='L')? r='D',
+	r[, &Fm(r) (r>=0)? {
+		 sp+=2, (r)>?{ #F #L #M #P #S #V #W #+ #> #< #O #E }
+	}
+	r], (r)>!{
+;	L	#L	;Drive
+;	M	#M	;Mask
+;	P	#P	;Path
+;	S	#S	;Sort
+;	V	#V	;View
+;	W	#W	;Window
+;	A	#+	;All
+;	T	#>	;Trcd
+;	R	#<	;Retcd
+;	O	#O	;cOmpare
+;	E	#E	;Exec menu
+;	F	#F	;File menu
+;		#!	;Exec command
+	X	>X	;eXec
+	H	#H	;sHell
+;		#-	;cancel
+;		#*	;*.*
+;		#/	;root
+	@	#Q	;vzpath
+;	A	#A	;attribute
+;	D	#D	;delete
+	R	#R	;rename
+	K	#K	;makedir
+	N	#N	;new file
+;	C	>C	;Copy
+	}.
+:C	pm="zcopy %@ %2", #!
+:X	pm="%1 %2", #!
+
+* Options
+
+FM7			;Filer mode
+			;(+1=Space, +2=Exec menu, +4=Dos Box +8=Rotate)
+FW1024			;dir buffer count
+FV1			;dir view mode (1=long, 5=short)
+FS0			;dir sort option (b0..b6)
+FO3			;dir compare option (b0..b4)
+
+* Else
+
+4	File  Drive  Mask  Path  Sort  View  Window  All  ToCD  RetCD  Compare  Exec
+#if 98
+13	"$(03,01,04,05,06,07)"
+#elseif J31
+13	"$(00,00,00,00,00,00)"
+#else
+13	"$(1D,19,1C,1B,1E,1F)"
+#endif
+
+;======== End of vzfle.def ========
+

@@ -1,0 +1,554 @@
+======== cmos.def (v1.5) ========
+
+* Command keys
+
+00	^K ^O [ESC]	;Prefix Keys
+01	^@		:Repeat Command
+02	^M		:Kbd Macro
+03	[ESC] @X	:Escape
+04	[CR]		:Enter
+05	[UP]		:Up
+06	[DOWN]		:Down
+07	[<--]		:Left
+08	[-->]		:Right
+
+09	\[<--]		:Word Left
+10	\[-->]		:Word Right
+11	^[<--]		:Top of Line
+12	^[-->]		:End of Line
+13	[INS]		:Insert Mode
+14	[BS]		:Backspace
+15	[DEL]		:Del char
+16	\[BS]		:Del Left Word
+17	\[DEL]		:Del Right Word
+18	^[BS]		:Del to BOL
+19	^E ^[DEL]	:Del to EOL
+20	^U \[INS]	:Char/Str undo
+21	[TAB]		:Tab
+22	^P		:Control Char
+23	^KU		:Word Case
+24	^V   [F04]	:Put Word
+25	^KN		:Put File Name
+
+30	^Q		:Paging Mode
+31	\[RLDN]		:Roll Up
+32	\[RLUP]		:Roll Down
+33			:Roll Up 2
+34			:Roll Down 2
+35	[RLDN]		:Page Up
+36	[RLUP]		:Page Down
+37	\[UP]		:Smooth Up
+38	\[DOWN]		:Smooth Down
+39	^[UP]		:Top of Window
+40	^[DOWN]		:End of Window
+41	^T ^[RLDN]	:Top of File
+42	^B ^[RLUP]	:End of File
+43	^R		:Last Position
+44	^KM		:Set Marker
+45	^L		:Jump to Line
+
+46	^X		:Mark Block
+47	^D		:Cut Line/Block
+48	^A		:Paste (Pop)
+49	^S		:Copy Line/Block
+50	^C		:Paste (Copy)
+51	^KY		:Clear Stack
+52	^J		:Block Top/End
+53	\[CR]		:Insert Line
+54	^KL		:Restore Line
+
+55	^F   [F02]	:Find String
+56	^KA  [F03]	:Replace String
+57	    \[F03]	:Replace Next
+58	    \[CLR]	:Match ()[]{}<>
+59	^G   [F01]	:Get Word
+60	^KG		:Read Tag
+61	^KC \[F04]	:Put Buffer
+
+62	^W		:Change Window
+63	^Z		:Pick Text
+64	^Y		:Split Window
+65	^H		:Border
+66	^OL ^[F06]	:Screen Lines ($lc)
+67	^OR		:Read Only
+68	^KI		:Indent L/R
+69	^KX \[F09]	:Compare Texts
+
+70	[ESC]O	@O	:Open Files
+71	[ESC]R	@R	:Read Files
+72	[ESC]N	@N	:New Files
+73	[ESC]C	@C	:Close
+74	[ESC]L	@L	:Load a File
+75	[ESC]S		:Save as
+76	[ESC]A	@A	:Append to
+77	[ESC]Q		:Quit
+78	[ESC]E 	@E	:Exec Dos
+79	\[ESC]		:Peek Console
+
+80	^K^ @^		:Install Macro
+81	^K_		:Print Kbd Macros
+82	[ESC]P	@P	:Path Rename
+83	[ESC]W		:Profile
+
+88	\[<--]		:Select Left		; Filer
+89	\[-->]		:Select Right		;
+90	\[UP]		:Select Up		;
+91	\[DOWN]		:Select Down		;
+92	[CLR]		:Top/End		;
+93	[TAB]		:Change Window		;
+94	[BS]		:Parent Dir		;
+
+95	\[ESC]		:Peek Console		; DOS
+96	^W		:Alias List		;
+97	^[CR]		:Spread			;
+98	\[CR]		:To Filer		;
+
+* Function key labels
+
+"Gets","Find" ,"Chng" ,"Puts","Mult", " Cr","Tab","Stat","RO"," Do!"
+"mode","grep","chng2","puts2","EMS", "doc","","opt","comp"," do!"
+
+* Text windows
+
+"Open File: <$pd>",40
+"Save As:",40
+"New File:",40
+"Append to:",40
+"Path/mask:",40
+"Search:",40
+"Replace:",40
+"Put String:",40
+"Line:",1
+"Rename:",40
+
+* System menus
+
+1	"Macro Menu",42,0,24
+2	"Alias List",40,0,10,-1
+3	"Pick Text",37,0
+4	"Range",10,3 "All" "Forward" "Backward"
+
+5	"",13,8
+	"W *.*"
+	"Q ."
+	"C .h .c"
+	"A .inc .asm"
+	"E .exe .com"
+	"B .bat"
+	"D .doc .txt"
+	"N .mix .pcs"
+
+6	"",11,7	"Filename"  "Ext" "New" "Old" "Large" "Small" "Directory"
+7	"",10,6	"Compare" "Exist" "New" "Old" "Large" "Small"
+
+8	"",10,10
+	"Copy	copy %1 %2"
+	"Delete	del "
+	"Pack	la %2 %*"
+	"Unpack	le "
+	"View	ll "
+	"fc Asc	fca %1 %2"
+	"fc Bin	fcb %1 %2"
+	"Test	dir "
+	"eXec	%1 %2"
+	"Move	move %1 %2"
+
+9	"",0,4
+	"com"
+	"exe"
+	"lzh ll "
+	"bdf bupdate -v "
+
+* Macros
+
+3 \[F01] "Mode Menu"
+	?. !20
+
+4 \[F02] "Grep"
+	(s)?? #E "grep -r- -w " #I #m
+
+5  [ESC]M \[HELP] "Macro menu"
+	!99
+
+6  [ESC]D @D "Duplicate"
+	?. (wt)? >A
+	(wn==0 || wc==tc)?{ &m(6). }
+	&s sn[, sn-,
+	&#Y(0) l=ln, ly[,
+	#R #P #m mr=$80,
+	ky], ev[, ev-, &#J(l) ev], #W
+	sn], &d #Y .
+:A	(mr<=1)?{ #W (mr<=1)?{ #W . }}
+	#C (wt)?{ #W &#Y(0) }
+
+7  [ESC]U @U "Undo Edit"
+	?. #] (mr==1)?{ &a(37) (r<=0)?. }
+	&s #L (s==4)?'n' #P #m &d
+
+8  [ESC]I @I "Insert File"
+	?. (mr==$80)?{ &m(36) . }
+	&m("ÉJÅ[É\Éãà íuÇ÷ÉtÉ@ÉCÉãÇì«Ç›çûÇ›Ç‹Ç∑")
+	n=wn, c=wc,
+	#R
+:A	(s)?{ &c >A }
+	(wc==c)? >Z
+	mr=-1,
+	&s
+	#W &#T(n)
+:B	#W &#T(c+1)
+	#b #_ (ct)?{ #> #m #x }
+:C	#y (mb)?{ #W #< #i (ek)?? #B #W >C }
+	#C &#T(n)
+	#< #i (ek)?? #B
+	(wc>c)? >B
+ 	&d
+:Z	&m("")
+
+9  [ESC]X "X:close all"
+:A	#C
+:B	(s)>?{ >A . . . }
+	i=wc, &c (wc==i)?. >B
+
+11 [ESC]@ @@ "Instant Macro"
+	?. &g("Statement:")
+	(r==-1)?.
+	&e(pw)
+	&m("Result: %d %u $%x '%c' $"%16s$"",r,r,r,r,r)
+	&d
+
+12 @[<--] "Left of Window"
+	?. &x(0)
+
+13 @[-->] "Right of Window"
+	?. &x(we-2)
+
+14 [CLR]  "View Point"
+	?. y=wy-1,y/=2,
+	(ly==y)?{ ky=wy-2, >A }
+	(ly==1)?{ ky=y, >A }
+	ky=1,
+:A	&d #]
+
+15 ^OT "change Tab    ($ht)"
+	?. ht=12-ht, &d
+
+16 ^K0 "Set Marker(1..4)"
+	?. i=r, &#M(r) (r)?. &m("É}Å[ÉN #%d",i)
+
+17 [ESC]0 "Jump to Marker"
+	?. &#U(r)
+
+19 ^KD "Duplicate Line"
+	?. #k #i
+
+;20 ^KJ "Undo Paste"
+;	?. mb=r, #y
+
+21 [F05] "Multi File"
+	?. i=wc,
+	(cm==56)? >R
+:S	(mp<2)?.
+	#c (r)??.
+	#T #T (i--)??.
+	#^ ky=wy/2, >S
+:R	#57 #T #T (i--)? >R
+
+22 [NFER] "Fix Word"
+	?. (lx)??.
+	&s mp[,
+	(cm)?{ x=lx, i=2, }?{ &x(x) #t i++, }
+	#a #G #61 ' ' #h (i){ #e } #m #t
+	mp], #? cm=0, 
+
+23  [F10] "Do!"
+	&01 " " #m (r)?{ #95 #U #< }	; ÉGÉâÅ[Ç»ÇÁconsoleÇÉIÅ[ÉvÉì
+
+24 \[F10] "Do!+"
+	&01 " "
+	(pu.0)?{ &?(pu) #m . }
+	"g" #m				; ÉfÉtÉHÉãÉgÉIÉvÉVÉáÉì
+
+1:	(s)? >Z				; ÉçÅ[ÉJÉãÉ}ÉãÉç
+	(wn)?{
+		#S #m (fe<1||fe>2)?/	; ÉZÅ[Éu
+		#E "acc " #P .		; ägí£éqÇ™ .c .asm Ç»ÇÁ "acc <Ãß≤Ÿñº>"
+	}
+:A	#60 (r)?{ #x (r)? >Z >A }	; ÉRÉìÉ\Å[ÉãÉtÉ@ÉCÉãÇ»ÇÁÉ^ÉOÉWÉÉÉìÉv
+	#x #O #e #m
+	(s)?{ #[ #[ >A }
+:Z	&q				; ÇPÉlÉXÉgÉXÉLÉbÉv
+
+25 @[UP] "Roll Up"
+	(wt)?{ #W (ks&1)? #r ? #w #W .} #37
+
+26 @[DOWN] "Roll Down"
+	(wt)?{ #W (ks&1)? #c ? #z #W .} #38
+
+27 [F06] "CR"
+	dc=dc!, &d
+
+28 [F07] "TAB"
+	dt=dt!, &d
+
+29 [F08] "STAT"
+	ds=ds!, &d
+
+30 @X "ãÈå`ÉuÉçÉbÉNÉÇÅ[Éh"
+	?. #b (mb)?{ mb=4, xb=lx, }
+
+31 ^D "ãÈå`ÉuÉçÉbÉNçÌèú"
+	m-, >01
+
+32 ^S "ãÈå`ÉuÉçÉbÉNãLâØ"
+	m+, >01
+1:
+	?.
+	(mb != 4)?{ (m)? #k ? #y . }
+	&s
+	xx=-1, (lx > xb)? xx=lx,
+	n=ln, #b #B (ln < n)?{ n=ln, #B }
+	cc=0,
+:A	(ln <= n)? >Z #e
+	&x(xb) #b
+	(xx < 0)? #> ? &x(xx)
+	(m)? #k ? #y
+	cc++, >A
+:Z	&d	
+
+33 ^A "ãÈå`ÉuÉçÉbÉNë}ì¸"
+	?. (cc)??{ #i . }
+	xx=lx,
+	ei[, ek[, ei-, ek-,
+	&s
+:A	(ct <= 1)?{ #> &#68(xx) #> }
+	#i #x (r)?{ #> #m }
+	(cc--)? >A
+	ek], ei],
+	&d
+
+34 [ESC]] "çsññÇÃSPACE•TABÇÃçÌèú"
+	?. (mb)??.
+	&s
+	n=ln, #b #B (ln > n)?{ n=ln, #B }
+:A	(ln >= n)? >Z
+	#>
+	(lx)?{
+		#s (ct == 2)?{ #d #16 }
+	}
+	#x >A
+:Z	&d
+
+36 ^G [F01] "åüçıï∂éöóÒÇÃòAë±éÊìæ"
+	?.
+	(cm||mb)?{ #G xx=r, cm=0, . }
+	&s
+	#b
+	cp+=xx, #? &s
+:A	(ct<2)? >B
+	a=ct, #d
+	(ct>=a)? >A
+:B	&d
+	xx=cp,  #B
+	xx-=cp, #G
+	cm=0,
+
+37 ^KP "ÇoÇqÇsÅ{Å{"
+        ?. #] (mb)? >A
+        (mr==1)?{ #S #m }
+        #E "prt " #P #m #[ .
+:A	p="temp.tmp",
+	#S &?(p) #m
+	#E "prt " &?(p) #m
+	"del " &?(p) #m #[
+
+38 \[F08] "Set option"
+	?.
+	&g("Option:")
+	(r<0)?.
+	p=pw,q=pu,			; puÅiÉ}ÉNÉçîzóÒóÃàÊÅjÇ÷ÉRÉsÅ[
+:A	(q.0=p.0)?{ p++, q++, >A }
+	&m(pu)				; ÉIÉvÉVÉáÉìÇÃï\é¶
+
+39 \[F05] "EMS status"
+	?.
+	&m("EMS %d/%d",ef,em)
+
+40 ^OO "View mode"
+	(ro!)? &m("View mode") ? &m("Edit mode")
+
+41 ^[ESC] "èÌíìÉÅÉÇÉäämï€"
+	(s!=2)?.
+	&s #95 #78 &d
+
+42 @Q "ã≠êßèIóπ"
+	#[
+
+43 @S "ã≠êßÉZÅ[Éu"
+	?. #S #m
+
+* Pop up menu
+
+20	"",20,15,5
+	"CR  Display",	Dc
+	"TAB Display",	Dt
+	"EOF Display",	De
+	"Line Numbers",	Dl
+	"Number Mode	Line scrn",Dn
+	"System Info.",	Ds
+	"\back Slash	\ \",Db
+	"Underline Csr",Du
+	"Auto Indent",	Ei
+	"Ignore Case",	Ec
+	"Word Search",	Ew
+	"Half Paging	Full Half",Eh
+	"Backup File",	Eb
+	"Right Margin",	WE
+	"Page Length",	PG
+
+* Options
+
+Bt64			;size of text buffer (16..64KB)
+Bq			;size of temp on memory (KB) or EMS (page)
+Bf64			;size of dos reserve (KB)
+Bo32			;size of console buffer (0..32KB)
+GV0			;use GVRAM #1
+			;(0=notuse, 1=A8..B7, 2=B0..BF, 3=B8..BF/E0..E7)
+EM			;allocate EMS pages (0..128, EM=all)
+SW3			;swap mode
+			;(0=OFF, 1=text, 2=text&code, 3=TSR 2.6KB)
+			
+Bm3100			;macro buffer free
+Ba0			;alias buffer free
+Hs256			;string history free
+Hf128			;file history free
+Hx1024			;DOS command history free
+Ha64			;application history free
+Bl4096			;size of line buffer (256..(Bt*1024/8))
+Bc1024			;size of delete char buffer
+Bu64			;size of user work area
+			
+TC20			;max open files
+WD80			;field width (2..250)
+PG0			;page length
+RS3			;smooth scroll speed (0..4)
+Ta8			;TAB columns
+Tb4			;.C .H TAB columns
+Ci4			;cursor type (insert) (0..15)
+Co7			;cursor type (overwrite)
+FW256			;dir buffer count
+FV1			;dir view mode (1=long, 5=short)
+FS0			;dir sort option (b0..b6)
+FO3			;dir compare option (b0..b4)
+WL0			;pop-up window location (0..15)
+LC-			;line count (-/20/25)
+			
+An7			;text attr	b1 r2 m3 g4 c5 y6 w7
+Ac5			;CR,TAB,EOF	rv+8 un+16
+Al5			;line numbers
+Ah13			;block
+As15			;status bar
+Ao14			;con status bar
+Ar13			;read only status bar
+Am6			;message
+Ab5			;menu border
+At5			;menu title
+Aw7			;menu text
+Af6			;first letter
+Ai15			;selection bar
+Aj6			;help menu
+Ak6			;2-stroke key
+Ag1			;filer background
+Au6			;filer cursor
+			
+Dl-			;disp line number
+Dc-			;disp CR
+Dt-			;disp TAB
+De+ 			;disp EOF
+Ds-			;disp system info.
+Db+			;back slash char
+Dn-			;line number mode
+Du-			;under line
+Df-			;full path
+Dp+			;path name lower
+Dh-			;path name left
+Dg+			;disp JIS83 char
+			
+Ei+			;auto indent
+Es+			;smooth scroll by ^QE,^QX
+Ez+			;add EOF
+Eb-			;make backup
+Eu-			;convert TAB to SPC
+Et+			;title search
+Eh-			;half paging
+Ew+			;word search
+Ec-			;ignore upr/lwr case
+Ex-			;warn text stack full
+En-			;cursor left of EOL
+Ev-			;V-center after jump
+Ek+			;jump to pasted block
+Ea-			;auto right margin by .nnn
+Ej-			;indent 2byte space
+El+			;cut right space/tab
+			
+Sx+			;keep console output
+Se+			;skip ESC sequence
+Sd+			;expand command line alias
+Sk-			;clear text stack before exec
+Sr+			;save editfile
+Sy+			;Y/N by [CR]/[SPC]
+;St-			;output DEF title
+Sn+			;ask new file
+Sq-			;quick exit
+			
+FP+			;control FEP
+FR-			;raise FEP
+FT0			;FEP type (0=auto, 1=vjeb, 2=mttk, 3=atok)
+FK+			;activate [F11]..[F15] keys
+
+* Alias
+
+sd	symdeb
+rene	ren %1 %&.%2
+fca	fc %1 %2%\%>
+fcb	fc /b /lb10 %1 %2%\%>
+sete	set %1=%%1%
+rm	del %1 ;rd %1
+acc	ac %& %*2
+la	lha a
+las	lha a -x1r2
+le	lha e
+ll	lha l
+lai	lha a %1 %*2 ; ish %1.lzh /sn
+zap	rmv -r
+mix	et mix
+comp	et comp
+nif	et nif
+move	copy %1 %<2 ; if exist %<2%\%>1 del %1
+test1	echo %: ; echo %& ; echo %.
+test2	echo %wd% %%a %1 %%1% %%a%
+
+* History
+
+:string
+	include segment assume public extrn label offset
+:file
+	\config.sys \autoexec.bat
+
+* Else
+
+1	helpe+moremac
+2	editfile
+3	.asm .inc .C .H .R .doc .bat .def .txt .mix .vc
+4 	Drive  Mask  Path  Sort  View  Window  All  TrCD  RetCD  Compare  Exec
+5	0Åú,Åù.Åö1Ås2Å´3Åt4Å©5Å°6Å®7Åw8Å™9Åx=Åû+Å¶*Å~-Åy/Åz
+6	0Ü∂,Ü÷.Ü∫1Üæ2Üﬁ3Ü∆4Üø5Ü·6Ü«7ÜÆ8ÜŒ9Ü≤=Ü§+Ü£*Ü¢/Ü™-Ü´
+;6	0ÜW,Üw.Ü[1Ü_2ÜÄ3Üg4Ü`5ÜÉ6Üh7ÜO8Üo9ÜS=ÜE+ÜD*ÜC/ÜK-ÜL
+7	*/;#=(
+8	$pd>
+9	.com .exe .obj .lib .arc .lzh .bdf
+10	"$(95,96,9C,9D,9E,9F,88,97,1C,1F,1D)"
+;11	ﬁ¡∫øº≤ ∑∏∆œ…ÿ”–◊æ¿Ωƒ∂≈À√ª›¬ﬂ∞—Õ€‹«Ã±≥¥µ‘’÷
+
+*
+======== End of cmos.def ========
+

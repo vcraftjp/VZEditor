@@ -1,0 +1,24 @@
+======== update.def (v1.5) ========
+
+* A エイリアス
+
+cat	type
+ls	dir %-w %1
+sd	symdeb
+rene	ren %1 %<.%2
+fca	fc %1 %2%\%>
+fcb	fc /b %1 %2%\%>
+sete	set %1=%%1%
+test1	echo %: ; echo %& ; echo %.
+test2	echo %wd% %%a %1 %%1% %%a%
+
+* H ヒストリー
+
+:string
+	include define static extern typedef struct switch default return
+:file
+        \config.sys \autoexec.bat
+
+*
+======== End of update.def ========
+

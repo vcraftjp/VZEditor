@@ -1,0 +1,583 @@
+======== vz.def (v1.57) ========
+
+* C ƒRƒ}ƒ“ƒhƒL[
+
+00	^Q ^K [ESC]	;‚QƒXƒgƒ[ƒNƒL[iÅ‘å‚UŒÂj
+01	^[		:’¼‘O‚ÌƒRƒ}ƒ“ƒhŽÀs
+02	^_		:ƒL[ƒ{[ƒhƒ}ƒNƒ
+03	[ESC]		:ƒGƒXƒP[ƒv
+04	^M   [CR]	:ƒŠƒ^[ƒ“
+05	^E   [UP]	:ª
+06	^X   [DOWN]	:«
+07	^S   [<--]	:©
+08	^D   [-->]	:¨
+
+09	^A  \[<--]	:‚PŒê©
+10	^F  \[-->]	:‚PŒê¨
+11	^QS ^[<--]	:˜_—s“ª
+12	^QD ^[-->]	:˜_—s––
+13	^V   [INS]	:‘}“üƒ‚[ƒh
+14	^H   [BS]	:ƒoƒbƒNƒXƒy[ƒX
+15	^G   [DEL]	:‚P•¶Žšíœ
+16	^QH \[BS]	:Œê‚Ìæ“ª‚Ü‚Åíœ
+17	^T  \[DEL]	:Œê‚ÌI‚è‚Ü‚Åíœ
+18	^QT ^[BS]	:s“ª‚Ü‚Åíœ
+19	^QY ^[DEL]	:s––‚Ü‚Åíœ
+20	^U  		:íœ•¶Žši—ñj•œŠˆ
+21	^I   [TAB]	:ƒ^ƒu
+22	^P		:§Œä•¶Žš“ü—Í
+23	^QU		:‚PŒê‘å^¬•¶Žš•ÏŠ·
+24	^QI \[F05]	:•¶Žš—ñ‚Ì•¡ŽÊ
+25	^QN		:ƒtƒ@ƒCƒ‹–¼‚Ì•¡ŽÊ
+
+30	^@  \[INS]	:ƒy[ƒWƒ“ƒOƒ‚[ƒh
+31	^W  \[RLDN]	:ƒ[ƒ‹ƒAƒbƒv
+32	^Z  \[RLUP]	:ƒ[ƒ‹ƒ_ƒEƒ“
+33	    		:ƒ[ƒ‹ƒAƒbƒv‚Qs
+34	    		:ƒ[ƒ‹ƒ_ƒEƒ“‚Qs
+35	^R  \[UP]	:ƒy[ƒWƒAƒbƒv
+36	^C  \[DOWN]	:ƒy[ƒWƒ_ƒEƒ“
+37	^QW  [RLDN]	:ƒXƒ€[ƒXƒAƒbƒv
+38	^QZ  [RLUP]	:ƒXƒ€[ƒXƒ_ƒEƒ“
+39	^QE ^[UP]	:‰æ–Ê‚Ìã’[
+40	^QX ^[DOWN]	:‰æ–Ê‚Ì‰º’[
+41	^QR ^[RLDN]	:ƒtƒ@ƒCƒ‹‚Ìæ“ª
+42	^QC ^[RLUP]	:ƒtƒ@ƒCƒ‹‚ÌÅŒã
+43	^QP		:’¼‘O‚ÌƒJ[ƒ\ƒ‹ˆÊ’u
+44	^QM		:ƒJ[ƒ\ƒ‹ˆÊ’uƒ}[ƒN
+45	^QJ		:J Žw’ès”Ô†ƒWƒƒƒ“ƒv
+
+46	^B   [F10]	:ƒuƒƒbƒNƒ‚[ƒh
+47	^Y   [F08]	:s¥ƒuƒƒbƒNíœ
+48	^J   [F09]	:s¥ƒuƒƒbƒN‘}“ü
+49	^KK \[F08]	:s¥ƒuƒƒbƒN‹L‰¯
+50	^KC \[F09]	:s¥ƒuƒƒbƒN•¡ŽÊ
+51	^KY		:C ƒXƒ^ƒbƒN‚ÌÁ‹Ž
+52	^QB		:B ƒuƒƒbƒN‚Ìæ“ª^ÅŒã
+53	^N  \[CR]	:‚Ps‘}“ü
+54	^QL		:U s‚Ì‰ñ•œ
+
+55	^QF  [F06]	:ŒŸõ•¶Žš—ñ‚ÌÝ’è
+56	^QA  [F07]	:•¶Žš—ñ‚Ì’uŠ·
+57	^QO		:’¼‘O‚Ì’uŠ·‚ÌÄŽÀs
+58	^QK  \[CLR]	:‘Î‰ž‚·‚é()[]{}<>
+59	^L   [F05]	:ŒŸõ•¶Žš—ñ‚ÌŽæ“¾
+60	^KG		:ƒ^ƒOî•ñ‚ÌŽæ“¾
+61	^KA \[F07]	:•¶Žš—ñ‚Ì‘I‘ð•¡ŽÊ
+
+62	^KW  [F02]	:ƒEƒBƒ“ƒhƒEØ‘Ö‚¦
+63	^KT  [F03]	:•ÒWƒeƒLƒXƒgØ‘Ö‚¦
+64	^KS  [F04]	:•ªŠ„ƒ‚[ƒhØ‘Ö‚¦
+65	^KF \[F04]	:•ªŠ„ˆÊ’u‚Ì•ÏX
+66	^KL		:L •\Ž¦s”Ø‘Ö‚¦ ($lc)
+67	^KR		:R Read onlyƒ‚[ƒh
+68	^KH		:I ƒCƒ“ƒfƒ“ƒg‚Ì•ÏX
+69	^KX \[F03]	:ƒeƒLƒXƒg‚Ì”äŠr
+
+70	[ESC]O	@O	:O ƒtƒ@ƒCƒ‹‚ÌƒI[ƒvƒ“
+71	[ESC]R	@R	:R Read onlyƒI[ƒvƒ“
+72	[ESC]N	@N	:N V‹Kƒtƒ@ƒCƒ‹ƒI[ƒvƒ“
+73	[ESC]C	@C	:C ƒtƒ@ƒCƒ‹‚ÌƒNƒ[ƒY
+74	[ESC]L	@L	:L ƒNƒ[ƒY¥ƒI[ƒvƒ“
+75	[ESC]S	@S	:S ƒtƒ@ƒCƒ‹‚ÌƒZ[ƒu
+76	[ESC]A	@A	:A Šù‘¶ƒtƒ@ƒCƒ‹‚Ö’Ç‰Á
+77	[ESC]Q	@Q	:Q ƒGƒfƒBƒ^‚ðI—¹
+78	[ESC]E	@E	:E DOSƒRƒ}ƒ“ƒhŽÀs
+79	\[ESC]		:P DOS‰æ–Êo—Í‚ÌŽQÆ
+
+80	^K^		:ÄƒJƒXƒ^ƒ}ƒCƒY
+81	^K_		:ƒL[ƒ{[ƒhƒ}ƒNƒ•¶‘}“ü
+82	[ESC]P	@P	:P ƒtƒ@ƒCƒ‹–¼‚Ì•ÏX
+83	[ESC]W	@W	:ƒvƒƒtƒ@ƒCƒ‹î•ñ‚ÌƒZ[ƒu
+
+88	    \[<--]	:‘I‘ð©			; Filer
+89	    \[-->]	:‘I‘ð¨			;
+90	    \[UP]	:‘I‘ðª			;
+91	    \[DOWN]	:‘I‘ð«			;
+92	     [CLR]	:æ“ª^ÅŒã		;
+93	     [TAB]	:ƒEƒBƒ“ƒhƒEØ‘Ö‚¦	;
+94	     [BS]	:eƒfƒBƒŒƒNƒgƒŠ		;
+
+95	\[ESC]		:DOS‰æ–Êo—Í‚ÌŽQÆ	; DOS
+96	^W		:ƒGƒCƒŠƒAƒXˆê——		;
+97	^[CR]		:ƒRƒ}ƒ“ƒh‚Ì“WŠJÄ•\Ž¦	;
+98	\[CR]		:ƒtƒ@ƒCƒ‰[		;
+
+* F ƒtƒ@ƒ“ƒNƒVƒ‡ƒ“ƒL[•\Ž¦
+
+"Ì§²Ù","‘‹Š·","•¶Š·","‘‹Š„","‹L‰¯","ŒŸõ","’uŠ·","¶¯Ä","²Ý»°Ä","ÌÞÛ¯¸"
+"Ó°ÄÞ"," »ÌÞ","”äŠr","‘‹“®","•¡ŽÊ","ÏÙÁ","•¡ŽÊ2","ºËß°","Íß°½Ä"," À¸Þ"
+
+* T ƒeƒLƒXƒgƒEƒBƒ“ƒhƒE
+
+"y“ü—Íƒtƒ@ƒCƒ‹z <$pd>",40
+"yo—Íƒtƒ@ƒCƒ‹z",40
+"yV‹Kƒtƒ@ƒCƒ‹z",40
+"y’Ç‰Áƒtƒ@ƒCƒ‹z",40
+"yƒpƒX¥ƒ}ƒXƒNz",40
+"yŒŸõ•¶Žš—ñz",40
+"y’uŠ·•¶Žš—ñz",40
+"y•¡ŽÊ•¶Žš—ñz",40
+"ys”Ô†z",1
+"yƒtƒ@ƒCƒ‹–¼z",40
+
+* S ƒVƒXƒeƒ€ƒƒjƒ…[
+
+1	"yƒ}ƒNƒƒƒjƒ…[z",42,0,24
+2	"yƒGƒCƒŠƒAƒXˆê——z",40,0,10,-1
+3	"y•ÒWƒeƒLƒXƒgz",37,0
+
+4	"y’uŠ·”ÍˆÍz",14,3
+	"A ƒeƒLƒXƒg‘S‘Ì"
+	"F ƒJ[ƒ\ƒ‹ˆÈ~"
+	"B ƒJ[ƒ\ƒ‹ˆÈ‘O"
+
+5	"",13,7
+	"W *.*"
+	"Q ."
+	"C .h .c"
+	"A .inc .asm"
+	"E .exe .com"
+	"B .bat"
+	"D .doc .txt"
+
+6	"",16,7
+	"F ƒtƒ@ƒCƒ‹–¼"
+	"E Šg’£Žq"
+	"N V‚µ‚¢‡"
+	"O ŒÃ‚¢‡"
+	"L ‘å‚«‚¢‡"
+	"S ¬‚³‚¢‡"
+	"D ƒfƒBƒŒƒNƒgƒŠ"
+
+7	"",14,6
+	"C ”äŠr‚ÌŽÀs"
+	"E ‘¶Ý"
+	"N V‚µ‚¢"
+	"O ŒÃ‚¢"
+	"L ‘å‚«‚¢"
+	"S ¬‚³‚¢"
+
+8	"",15,9
+	"C ƒRƒs[	copy %1 %2"
+	"D íœ		del "
+	"P ƒpƒbƒN	lha a %2 %*"
+	"U ƒAƒ“ƒpƒbƒN	lha x "
+	"V ƒpƒbƒNƒŠƒXƒg	lha l "
+	"A ”äŠr(Asc)	fca %1 %2"
+	"B ”äŠr(Bin)	fcb %1 %2"
+	"T ƒeƒXƒg	dir "
+	"X ŽÀs		%1 %2"
+
+9	"",0,3
+	"com"
+	"exe"
+	"lzh lha l "
+
+* M ƒ}ƒNƒ
+
+2  [F01] "yƒtƒ@ƒCƒ‹ƒƒjƒ…[z"
+	?. !01
+
+3 \[F01] "yƒ‚[ƒhƒƒjƒ…[z"
+	?. !02
+
+4 \[F02] "yƒTƒuƒƒjƒ…[z"
+	?. !03
+
+5  [ESC]M @M "yƒ}ƒNƒƒƒjƒ…[z"
+	?. !99
+
+6  [ESC]D @D "D ƒeƒLƒXƒg‚Ì“ñd‰»"
+	?. (wt)? >A
+	(wn==0 || wc==tc)?{ &m(6). }
+	&s sn[, sn-,
+	&#Y(0) l=ln, ly[,
+	#R #P #m mr=$80,
+	ky], ev[, ev-, &#J(l) ev], #W
+	sn], &d #Y .
+:A	(mr<=1)?{ #W (mr<=1)?{ #W . }}
+	#C (wt)?{ #W &#Y(0) }
+
+7  [ESC]U @U "U •ÒW‚Ì‚â‚è’¼‚µ"
+	?. #] (mr==1)?{ &a(37) (r<=0)?. }
+	&s #L (s==4)?'n' #P #m &d
+
+8  [ESC]I @I "I ƒJ[ƒ\ƒ‹ˆÊ’u‚Ö‘}“ü"
+	?. (mr==$80)?{ &m(36) . }
+	&m("ƒJ[ƒ\ƒ‹ˆÊ’u‚Öƒtƒ@ƒCƒ‹‚ð“Ç‚Ýž‚Ý‚Ü‚·")
+	n=wn, c=wc,
+	#R
+:A	(s)?{ &c >A }
+	(wc==c)? >Z
+	mr=-1,
+	&s
+	#W &#T(n)
+:B	#W &#T(c+1)
+	#b #_ (ct)?{ #> #m #x }
+:C	#y (mb)?{ #W #< #i (ek)?? #B #W >C }
+	#C &#T(n)
+	#< #i (ek)?? #B
+	(wc>c)? >B
+ 	&d
+:Z	&m("")
+
+9  [ESC]X "X ‘Sƒtƒ@ƒCƒ‹‚ÌƒNƒ[ƒY"
+	?.
+:A	#C
+:B	(s)>?{ >A . . . }
+	i=wc, &c (wc==i)?. >B
+
+10 [ESC]^ @^ "ŠO•”ƒ}ƒNƒ‚ÌŽÀs"
+	?. #O &?(pi) "*.def" #m
+:A	(s)?{ &c >A } (r<0)?.
+	#80 (r)?.
+	#C >*
+
+11 [ESC]@ @@ "ƒ}ƒNƒ•¶‚ÌŽÀs"
+	?. &g("yƒ}ƒNƒ•¶z")
+	(r==-1)?.
+	&e(pw)
+	&m("Result: %d %u $%x '%c' $"%16s$"",r,r,r,r,r)
+	&d
+
+12 ^Q[ "•\Ž¦s“ª"
+	?. &x(0)
+
+13 ^Q] "•\Ž¦s––"
+	?. &x(we-2) #?
+
+14 [CLR]  "•\Ž¦ˆÊ’u•ÏX"
+	?. y=wy-1,y/=2,
+	(ly==y)?{ ky=wy-2, >A }
+	(ly==1)?{ ky=y, >A }
+	ky=1,
+:A	&d #]
+
+15 ^KI "T ƒ^ƒu‚ÌØ‘Ö‚¦   ($ht)"
+	?. ht=12-ht, &d
+
+16 ^K0 "ƒ}[ƒN(1-4)"
+	?. i=r, &#M(r) (r)?. &m("ƒ}[ƒN #%d",i)
+
+17 ^Q0 "ƒ}[ƒNˆÊ’u‚ÖƒWƒƒƒ“ƒv"
+	?. &#U(r)
+
+18 \[F10] "ƒ^ƒOƒWƒƒƒ“ƒv"
+	?.
+:A	#60 (r)?{ #x (r)?. >A }
+	#x #O #e #m
+	(s)?{ #[ #[ >A }
+
+19 ^KD "ƒJ[ƒ\ƒ‹s‚Ì•¡ŽÊ"
+	?. #k #i
+
+20 ^KU "ƒy[ƒXƒg‚ÌƒAƒ“ƒhƒD"
+	?. mb=r, #y
+
+21 \[F06] "•¡”ƒeƒLƒXƒg‚ÅŒŸõ¥’uŠ·"
+	?. i=wc,
+	(cm==56)? >R
+:S	(mp<2)?.
+	#c (r)??.
+	#T #T (i--)??.
+	#^ ky=wy/2, >S
+:R	#57 #T #T (i--)? >R
+
+22 ^[TAB] "•¶Žš—ñ‚Ì•âŠ®"
+	?. (lx)??.
+	&s mp[,
+	(cm)?{ x=lx, i=2, }?{ &x(x) #t i++, }
+	#a #G #61 ' ' #h (i){ #e } #m #t
+	mp], #? cm=0, 
+
+23 ^KP "P ‚o‚q‚s{{"
+	?.
+	(mb==0)? >A
+	(mb==1)? >B
+	p="PRT.TMP",
+	#S &?(p) #m #b		;•¶Žš‹«ŠEƒuƒƒbƒNƒ‚[ƒh
+	#E "PRT " &?(p) #m
+	#E "DEL " &?(p) #m #[ .
+ :A	(mr==1)? {#S #m}	;”ñƒuƒƒbƒNƒ‚[ƒh
+	#E "PRT " #P #m #[ .
+ :B	n=ln, #B		;s‹«ŠEƒuƒƒbƒNƒ‚[ƒh
+	(n>ln)?{m=ln,n--,}?{m=n,n=ln-1,}
+	#b (mr==1)? {#S #m}
+	#E "PRT " #P &?(" /e%d,%d",m,n) #m #[
+
+24 ^L [F05] "ŒŸõ•¶Žš—ñ‚Ì˜A‘±Žæ“¾"
+	?.
+	(cm||mb)?{ #G xx=r, cm=0, . }
+	&s
+	#b
+	cp+=xx, #? &s
+:A	(ct<2)? >B
+	a=ct, #d
+	(ct>=a)? >A
+:B	&d
+	xx=cp,  #B
+	xx-=cp, #G
+	cm=0,
+
+25 ^KJ "•¶ŽšƒR[ƒh•\Ž¦"
+	?. ep+,
+:A	(s)??{ &m("•¶ŽšƒR[ƒh: %02xh",cd) }
+	&p (r!=#[)?{ &o(r) >A }		; [ESC]‚ÅI—¹
+	&m("") ep-,
+
+26 ^QV "Viewƒ‚[ƒh"
+	am[,
+	(ro!)?{ am=5, &m("View mode") }
+	     ?{ &m("Edit mode") }
+	am],
+
+27 @X "‹­§I—¹" #[
+
+28 [ESC]0 ""
+
+* P ƒƒjƒ…[
+
+1	"",24,14 #70 #73 #75 #72 #71 #74 #76 #82 &06 &07 &08 &09 #78 #77
+
+2	"",30,15,6
+	"C CR ‚Ì•\Ž¦",Dc
+	"T TAB‚Ì•\Ž¦",Dt
+	"E EOF‚Ì•\Ž¦",De
+	"L s”Ô†‚Ì•\Ž¦",Dl
+	"N s”Ô†ƒ‚[ƒh	˜_— •\Ž¦",Dn
+	"S ƒVƒXƒeƒ€î•ñ‚Ì•\Ž¦",	Ds
+	"\ ƒoƒbƒNƒXƒ‰ƒbƒVƒ…	\ \",Db
+	"U ƒAƒ“ƒ_[ƒ‰ƒCƒ“",Du
+	"A ƒI[ƒgƒCƒ“ƒfƒ“ƒg",Ei
+	"I ŒŸõŽž‚Ì‰p‘å/¬•¶Žš	‹æ•Ê “¯ˆêŽ‹",Ec
+	"W ƒ[ƒhƒT[ƒ`",Ew
+	"H ƒy[ƒWƒ“ƒO’PˆÊ	‘S‰æ–Ê ”¼‰æ–Ê",Eh
+	"B ƒoƒbƒNƒAƒbƒv",Eb
+	"R ‰æ–Ê‚Ì‰¡•(2`250)",WE
+	"P ƒy[ƒW’·",PG
+
+3	"",26,10  #45 #51 #52 #54 #66 #67 #68 &15 #79
+	"@$4EMS free/total: $ef/$em"
+
+;======== help.def (v1.00) ========
+
+* M ƒ}ƒNƒ
+
+1 [HELP] "ƒwƒ‹ƒv"
+	(s>1)? >A
+	(cd=='%')? >D
+	(cd=='#')?? >A
+	#d c=cd,
+	(c>='<' && c<='z')?{ #s i=c-'<', r=pv.i, >C }
+	&n r[, #s r], (r>=0)? >C
+:A	(s)>? { !01 !02 !03 !04 }
+:B	(r>=0 || r==-1 || r==-256)?.
+:C	(r==1~)?.		; 1=ƒwƒ‹ƒv‚Ìƒ}ƒNƒ”
+	!00 (r&$FF)? >B >A
+:D	mp[, ec[, ly[, ec-,
+	&s
+	#b #d #d #G
+	#c (r)? { ky[, #^ ky], #c }
+	ly],ec],mp],
+	&d #]
+
+* P ƒƒjƒ…[
+
+0	"It's ...",42,1,24,-1 #00
+
+1	"ƒXƒNƒŠ[ƒ“ƒGƒfƒBƒbƒg",18,8
+	"C ƒJ[ƒ\ƒ‹‚ÌˆÚ“®",!11
+	"R ƒXƒNƒ[ƒ‹‚ÆƒWƒƒƒ“ƒv",!12
+	"L Šî–{•ÒW‘€ì",!13
+	"B ƒJƒbƒg•ƒy[ƒXƒg",!14
+	"S •¶Žš—ñ‚Ì‘€ì",!15
+	"F ƒtƒ@ƒCƒ‹¥ƒEƒBƒ“ƒhƒE",!16
+	"M ƒ}ƒNƒ‘€ì",!17
+	"E ‚»‚Ì‘¼",!18
+
+2	"ƒeƒLƒXƒgƒEƒBƒ“ƒhƒE",18,2
+	"C ƒJ[ƒ\ƒ‹‚ÌˆÚ“®",!19
+	"L Šî–{•ÒW‘€ì",!13
+
+3	"ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“",18,3
+	"C ƒJ[ƒ\ƒ‹‚ÌˆÚ“®",!19
+	"L Šî–{•ÒW‘€ì",!13
+	"E ‚»‚Ì‘¼",!20
+
+4	"ƒtƒ@ƒCƒ‰[",42,11,24,-1
+	#05 #06 #07 #08	#88 #89 #90 #91 #92 #93 #94
+
+11	"",42,13,24,-1
+	#05 #06 #07 #08 #09 #10 #11 #12 &12 &13 #39 #40 &14
+
+12	"",42,17,24,-1
+	#30 #31 #32 #33 #34 #35 #36 #37 #38 #41 #42 #43 #44 #45 &16 &17 &18
+
+13	"",42,13,24,-1
+	#13 #14 #15 #16 #17 #18 #19 #20 #21 #22 #23 #24 #25
+
+14	"",42,9,24,-1
+	#46 #47 #48 #49 #50 &19 &20 #51 #52
+
+15	"",42,9,24,-1
+	#55 #56 #57 #58 #59 #60 #61 &21 &22
+
+16	"",42,17,24,-1
+	#70 #71 #72 #73 #74 #75 #76 #77 &06 &07 &08 &09 #82 #62 #63 #64 #65
+
+17	"",42,5,24,-1
+	#02 #81 &05 &10 &11
+
+18	"",42,12,24,-1
+	#01 #04 #53 #54 &15 #66 #67 #68 #69 #78 #79 #80
+
+19	"",42,8,24,-1
+	"ƒqƒXƒgƒŠ[ª",#05
+	"ƒqƒXƒgƒŠ[«",#06
+	#07 #08 #09 #10 #11 #12
+
+20	"",42,6,24,-1
+	"ƒGƒfƒBƒ^‚Ö",#03
+	"DOSƒRƒ}ƒ“ƒhŽÀs",#04
+	#95 #96 #97 #98
+
+;======== End of help.def ========
+
+* O ƒIƒvƒVƒ‡ƒ“
+
+Bt64			;ƒeƒLƒXƒgƒoƒbƒtƒ@‚ÌƒTƒCƒY (16..64KB)
+Bq0			;ƒeƒ“ƒ|ƒ‰ƒŠƒoƒbƒtƒ@‚ÌƒTƒCƒY: ƒƒ‚ƒŠ(KB)/EMS(page)
+Bf32			;DOSƒRƒ}ƒ“ƒh—pƒƒ‚ƒŠ‚ÌÅ¬’l (KB)
+Bo32			;ƒRƒ“ƒ\[ƒ‹o—ÍŽæž‚Ýƒoƒbƒtƒ@ƒTƒCƒY (0..32KB)
+GV0			;— ‚u‚q‚`‚lŽg—pƒ‚[ƒh
+			;(0=Žg—p‚µ‚È‚¢, 1=A8..B7, 2=B0..BF, 3=B8..BF/E0..E7)
+EM			;‚d‚l‚r‚ÌŽg—pƒy[ƒW” (0..128, EM=Žc‚è‘S•”)
+SW1			;ƒXƒƒbƒvƒ‚[ƒh
+			;(0=OFF, 1=text, 2=text&code, 3=TSR 2.6KB)
+
+Bm2048			;ƒ}ƒNƒƒoƒbƒtƒ@‚ÌƒtƒŠ[ƒGƒŠƒA
+Ba0			;ƒGƒCƒŠƒAƒXƒoƒbƒtƒ@	V
+Hs256			;•¶Žš—ñƒqƒXƒgƒŠ[	V
+Hf128			;ƒtƒ@ƒCƒ‹–¼		V
+Hx128			;DOSƒRƒ}ƒ“ƒhƒ‰ƒCƒ“	V
+Ha64			;ƒAƒvƒŠƒP[ƒVƒ‡ƒ“	V
+Bl1024			;sƒoƒbƒtƒ@ƒTƒCƒY (256..(Bt*1024/8))
+Bc256			;íœ•¶Žš—ñƒoƒbƒtƒ@ƒTƒCƒY
+Bu64			;ƒ}ƒNƒ”z—ñ—ÌˆæƒTƒCƒY
+
+TC10			;ƒI[ƒvƒ“‰Â”\‚ÈƒeƒLƒXƒg”
+WD80			;•\Ž¦ƒJƒ‰ƒ€” (2..250)
+PG0			;•\Ž¦s”Ô†‚Ìƒy[ƒW”
+RS3			;ƒXƒ€[ƒXƒXƒNƒ[ƒ‹‘¬“x (0..4)
+Ta8			;ƒ^ƒuƒJƒ‰ƒ€”
+Tb4			;.C .H ‚Ìƒ^ƒuƒJƒ‰ƒ€”
+Ci4			;ƒJ[ƒ\ƒ‹Œ`ó (‘}“ü) (0..15)
+Co7			;	V@  (ã‘)
+FW256			;ƒfƒBƒŒƒNƒgƒŠƒoƒbƒtƒ@‚Ì”
+FV1			;ƒfƒBƒŒƒNƒgƒŠ•\Ž¦ƒ‚[ƒh (1=ƒƒ“ƒO, 5=ƒVƒ‡[ƒg)
+FS0			;ƒfƒBƒŒƒNƒgƒŠƒ\[ƒgƒIƒvƒVƒ‡ƒ“ (b0..b6)
+FO3			;ƒfƒBƒŒƒNƒgƒŠƒRƒ“ƒyƒAƒIƒvƒVƒ‡ƒ“ (b0..b4)
+WL0			;ƒEƒBƒ“ƒhƒE‚Ì•\Ž¦ˆÊ’u (0..15)
+LC-			;ƒGƒfƒBƒbƒgŽž‚Ì‰æ–Ês” (-/20/25)
+
+An7			;ƒeƒLƒXƒg‘®«
+Ac5			;@ƒRƒ“ƒgƒ[ƒ‹•¶Žš
+Al5			;@s”Ô†
+Ah13			;@ƒuƒƒbƒN
+As15			;@ƒXƒe[ƒ^ƒXƒo[
+Ao14			;@ƒRƒ“ƒ\[ƒ‹ƒtƒ@ƒCƒ‹
+Ar13			;  Read onlyƒtƒ@ƒCƒ‹
+Am6			;@ƒƒbƒZ[ƒW
+Ab5			;@ƒEƒBƒ“ƒhƒE‚í‚­
+At5			;@ƒEƒBƒ“ƒhƒEƒ^ƒCƒgƒ‹
+Aw7			;@ƒEƒBƒ“ƒhƒE•¶Žš
+Af6			;@ƒEƒBƒ“ƒhƒEæ“ª•¶Žš
+Ai15			;@ƒEƒBƒ“ƒhƒEƒJ[ƒ\ƒ‹
+Aj6			;@ƒwƒ‹ƒvƒEƒBƒ“ƒhƒE
+Ak6			;@ƒL[ƒ‚[ƒh
+Ag1			;@ƒtƒ@ƒCƒ‰[”wŒi
+Au6			;@ƒtƒ@ƒCƒ‰[ƒJ[ƒ\ƒ‹
+
+Dl-			;s”Ô†‚Ì•\Ž¦
+Dc+			;CR ‚Ì•\Ž¦
+Dt-			;TAB‚Ì•\Ž¦
+De+ 			;EOF‚Ì•\Ž¦
+Ds-			;ƒVƒXƒeƒ€î•ñ‚Ì•\Ž¦
+Db-			;•¶Žš‚Ì•\Ž¦
+Dn-			;˜_—^•\Ž¦s”Ô†
+Du-			;ƒJ[ƒ\ƒ‹sƒAƒ“ƒ_[ƒ‰ƒCƒ“
+Df-			;ƒtƒ‹ƒpƒX–¼‚Å•\Ž¦
+Dp-			;ƒtƒ@ƒCƒ‹–¼‚Ì¬•¶Žš•\Ž¦
+Dh-			;ƒtƒ@ƒCƒ‹–¼‚ð¶‘¤‚É•\Ž¦
+Dg-			;V‚i‚h‚rŒrü‚Ì•\Ž¦
+
+Ei+			;ƒI[ƒgƒCƒ“ƒfƒ“ƒg
+Es+			;^QE,^QX ‚ÅƒXƒ€[ƒXƒXƒNƒ[ƒ‹
+Ez+			;EOF ƒR[ƒh‚Ì•t‰Á
+Eb+			;ƒoƒbƒNƒAƒbƒvƒtƒ@ƒCƒ‹‚Ìì¬
+Eu-			;[TAB]‚ÅƒXƒy[ƒXƒR[ƒh‚ð“ü—Í
+Et+			;ƒ^ƒCƒgƒ‹ƒT[ƒ`
+Eh-			;‘S^”¼‰æ–Êƒy[ƒWƒ“ƒO
+Ew+			;ƒ[ƒhƒT[ƒ`
+Ec-			;ŒŸõŽž‚Ì‰p‘å^¬•¶Žš‚Ì“¯ˆêŽ‹
+Ex-			;ƒeƒLƒXƒgƒXƒ^ƒbƒNfullŽž‚ÌŒx
+En-			;ƒJ[ƒ\ƒ‹‚ðs––ˆÈ~‚É•\Ž¦‚³‚¹‚È‚¢
+Ev-			;ƒWƒƒƒ“ƒvŒãƒJ[ƒ\ƒ‹‚ð‰æ–Ê‚Ì’†‰›‚Ö
+Ek-			;ƒuƒƒbƒNƒy[ƒXƒgŒãƒJ[ƒ\ƒ‹ˆÊ’uXV
+Ea-			;•\Ž¦ƒJƒ‰ƒ€”‚ÌŽ©“®Ý’è‹@”\
+RO-			;‚u‚‰‚…‚—ƒ‚[ƒh
+Ej-			;‘SŠpƒXƒy[ƒX‚ÌƒI[ƒgƒCƒ“ƒfƒ“ƒg
+
+Sx+			;ƒRƒ“ƒ\[ƒ‹o—Í‚ÌŽæž‚Ý
+Se+			;ƒGƒXƒP[ƒvƒV[ƒPƒ“ƒX‚ÌƒXƒLƒbƒv
+Sd+			;DOSƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚Ì“WŠJÄ•\Ž¦
+Sk-			;DOSƒRƒ}ƒ“ƒhŽÀs‘O‚ÉAƒeƒLƒXƒgƒXƒ^ƒbƒN‚ðƒNƒŠƒA
+Sr-			;editfile ‚Éƒvƒƒtƒ@ƒCƒ‹î•ñ‚ðƒZ[ƒu
+Sy-			;[CR]/[SPC] ‚Å [Y]/[N]
+;St-			;DEFƒtƒ@ƒCƒ‹‚Ìƒ^ƒCƒgƒ‹•\Ž¦
+Sn+			;V‹Kƒtƒ@ƒCƒ‹‚ÌŠm”F
+Sq-			;Close,Quit‚Å‘¦À‚ÉI—¹
+
+FP+			;vjeb/mttk/atok ‚ð§Œä
+FR-			;“ú–{Œê“ü—Íƒ‚[ƒh‚Å‹N“®
+FT0			;‚e‚d‚o‚Ìƒ^ƒCƒv (0=Ž©“®Ž¯•Ê, 1=vjeb, 2=mttk, 3=atok)
+FK-			;Šg’£ƒtƒ@ƒ“ƒNƒVƒ‡ƒ“ƒL[
+
+* A ƒGƒCƒŠƒAƒX
+
+cat	type
+ls	dir %-w %1
+sd	symdeb
+rene	ren %1 %<.%2
+fca	fc %1 %2%\%>
+fcb	fc /b %1 %2%\%>
+sete	set %1=%%1%
+test1	echo %: ; echo %& ; echo %.
+test2	echo %wd% %%a %1 %%1% %%a%
+
+* H ƒqƒXƒgƒŠ[
+
+:string
+	include define static extern typedef struct switch default return
+:file
+	\config.sys \autoexec.bat
+
+* E ‚»‚Ì‘¼
+
+1
+2	editfile
+3	.doc .txt .bat .def .H .C .inc .asm
+4	Drive  Mask  Path  Sort  View  Window  All  TrCD  RetCD  Compare  Exec
+5	0œ,.›1s2«3t4©5¡6¨7w8ª9x=V+¦*š-y/z
+6	0†¶,†Ö.†º1†¾2†Þ3†Æ4†¿5†á6†Ç7†®8†Î9†²=†¤+†£*†¢/†ª-†«
+7	*/;
+8	$6$pd>
+9	.com .exe .obj .lib .arc .lzh
+10	"$(95,96,9C,9D,9E,9F,88,97,1C,1F,1D)"
+;	   †¢ †¤ †® †² †¶ †º |   | ¨ « ©
+;11	ÞÁº¿¼²Ê·¸ÆÏÉØÓÐ×¾À½Ä¶ÅËÃ»ÝÂß°ÑÍÛÜÇÌ±³´µÔÕÖ
+
+*
+======== End of vz.def ========
+

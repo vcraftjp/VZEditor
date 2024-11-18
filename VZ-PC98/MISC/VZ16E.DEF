@@ -1,0 +1,188 @@
+======== vz16e.def (v1.6) ========
+
+* Command keys
+
+84	^KT		:Set title search string	; ##1.6
+
+
+* Text windows
+
+"Title String:",30
+
+* System menus
+
+10	"Macro Menu <$BM/free>",40,0
+
+* Macros
+
+1 "!Open"
+	(ne=='DE')? ts="*=",
+	(ne=='NI')? ts="\x ^\0/\0",
+;	(ne=='TX')?{ we=40, td=1, }
+;	(ne=='C'||ne=='H'||ne=='CP')?{ ts="/", qk="{}", }
+;	(ks&1)? &#_(0)
+
+1 "!Edit"
+	(ct>1)?{ &o(ic). }
+	(ic=='{')?{ '{' #m &o(9). }
+	(ic=='}')?{ #s (cd==9)?{ '}' #g #m }?{ #d '}' }
+
+1 "!View"
+	(ic)?{ (ic!=' '&&ic!='　')? >E (ks&1)? #r ? #c .}
+	(cm==4)?{ (mb)? >E #C . }
+	(cm==53)?{ #67 . }
+:E	' '
+
+1 "!Timer"
+	?. (mr!=1)?. (qn<=Qc)?. (mb)?.
+	(Qw){
+	  &m("Auto save?")
+	  (Qw){ &w(1) &k (r)?{ &m("Cancel") qn-, . } }
+	}
+	#S #m #83
+;	sq[-, #Q 'N'(s)?{ #[ #Q "YN"} sq], #83
+
+3 \[F01] "Mode Menu"
+	??{ !02 .} (s==1)?{ (vw)? !05 ? !04 }
+
+5 [ESC]M @M "Macro Menu"
+	!97 (r>=0)?{ !98 (r>=0)? >* >^ }
+	(r&$FF==15)?{ r=r>>8&$7F, &Zd(r) >^ }
+	(r&$FF==13)? >88
+
+10 [ESC]^ "Load Macro file"
+	?. p=pr, &Sp(p,"%s*.def",pi)
+:F	&Fl(p) &Cr fg.1=1,
+	(r)?{ &g("Macro file:",40) (r==-2)? >F (r<0)?. p=pw, (0)}
+	   ? &Fg(p)
+	&z(p) >*
+
+25 ^] "ZENKAKU KAKKO"
+        (s==3)?.
+	p="［］「」〔〕『』【】《》",
+	&f(cd,p)
+	mi-,
+	(r>=0)?{
+		(r&1)? #s
+                 &Sf(p,cd)
+                ((r+=4).0)? p=r,
+		mi+,
+	}
+	&?("%4s",p) mi-, #s
+
+27 ^KO "reset Options"
+	&^ &d #]
+
+#if 98
+1 [HELP] "Help" &z("helpe") >*
+#elseif J31
+1 [F10] "Help" &z("helpe") >*
+#else
+1 [F12] "Help" &z("helpe") >*
+#endif
+
+41 ^K^ "Install Macro"
+	&#80(0)
+
+42 ^KZ "toggle ZEN/HAN" &z("zenhan") >*
+43 ^KB "Column Block" &z("block") >*
+
+* Pop up menus
+
+2	"",22,14,5
+	"CR  Display",	Dc
+	"TAB Display",	Dt
+	"EOF Display",	De
+	"Line Numbers",	Dl
+	"ZEN space",Dj
+	"Number Mode	Line scrn",Dn
+	"System Info.",	Ds
+	"Underline Csr",Du
+	"Auto Indent",	Ei
+	"Half Paging	Full Half",Eh
+	"Backup File",	Eb
+	"Right Margin",	WE
+	"Page Length",	PG
+	"Overwrite mode	char scrn",Eo
+
+3	"",23,13  #45 #52 #54 #66 #67 &26 &27 #68 &15 #79 #83
+	"auto Save mode",!06
+	"$4 EMS Page: $ef/$em"
+
+4	"Seach Option",22,2,4
+	"Word Search",	Ew
+	"ignore Case",	Ec
+
+5	"Seach Option",22,4,4
+	"Word Search",	Ew
+	"ignore Case",	Ec
+	"ignore ZEN/HAN",ZH
+	"regular eXpr.",RX
+
+6	"",22,3,4
+	"delay Time",Qt
+	"Char count",Qc
+	"ack Wait Time",Qw
+
+======== moremac2.def (v1.6) ========
+
+* Macros
+
+88 ^KM \[F11] "External Macro"
+	?.
+	!01 (r<0)?. (r)?? >>
+	&Sf(pm,9) (r)??. &Ss(r) (r.0)??.
+	p=r, &Zs(p) (r)?? &z(p) >*
+
+;1 "!Abort"
+;	&m(r) &b(5) /
+
+* Pop up menus
+
+1	"",20,6
+	"Filer select"
+	"1 TOOL			tool"
+	"2 Column Block		block"
+	"3 KEISEN		keisen"
+	"4 toggle ZEN/HAN	zenhan"
+	"5 GAME			game"
+;*
+;======== End of moremac2.def ========
+
+* Options
+
+XM0			;allocate XMS KB (XM1:all)		##1.6
+RM0			;Mask EMS/XMS Realloc (+1:EMS, +2:XMS)	##1.6
+Bv1024			;size of Log info. table		##1.6
+
+#if 98
+Ae1			;control char #2			##1.6
+#elsenif J31
+Ae$12
+#else
+Ae0
+#endif
+Ay0			;path name				##1.6
+
+CA4+16+32		;control attr table			##1.6
+
+Dr+			;disp Right Margin			##1.6
+Dj-			;disp ZEN space				##1.6
+#if 98
+Dv-			;smooth scroll attr			##1.6
+#else
+Dv+
+#endif
+
+Eo-			;overwrite mode				##1.6
+RX-			;regular eXpression			##1.6
+ZH-			;ignore ZEN/HAN				##1.6
+Sz-			;reset options before exit		##1.6
+
+Sr5			;profile mode				##1.6
+Qt0			;auto save delay time			##1.6
+Qc40			;auto save char count			##1.6
+Qw100			;auto save ack. wait time		##1.6
+
+;======== End of vz16e.def ========
+

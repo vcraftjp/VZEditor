@@ -1,0 +1,65 @@
+
+*  本ファイルは、ＶＺエディタの入門用の練習ファイルです。
+
+ 1. The quick brown foxes jumped over the lazy dog.
+ 2. The quick brown foxes jumped over the lazy dog.
+ 3. The quick brown foxes jumped over the lazy dog.
+ 4. The quick brown foxes jumped over the lazy dog.
+ 5. The quick brown foxes jumped over the lazy dog.
+ 6. The quick brown foxes jumped over the lazy dog.
+ 7. The quick brown foxes jumped over the lazy dog.
+ 8. The quick brown foxes jumped over the lazy dog.
+ 9. The quick brown foxes jumped over the lazy dog.
+10. The quick brown foxes jumped over the lazy dog.
+11. The quick brown foxes jumped over the lazy dog.
+12. The quick brown foxes jumped over the lazy dog.
+
+cover discover recover
+covered covers
+
+*　ＶＺは、次のような数々の特徴を備えた、高性能ツールです。
+
+
+*【高性能エディタとして】
+
+・複数（１０個以上可）のテキストを２ウィンドウ（縦／横分割）表示
+・テキスト中のカーソル位置を視覚的に表示するインジケータ
+・美しいスムーススクロール（シフトキーによる高速モード／センスモード付き）
+・タイトル行サーチによる、論理ページング
+・テキストスタックによる、行／ブロックの連続削除／挿入／複写
+・行単位／文字単位のブロック境界（自動切替え）
+・表示行番号モード、ページ数指定によるページ表示
+・検索時の英大／小文字非識別モード、改行文字の指定
+・複数ファイルでの文字列検索／置換（マクロによる）
+・終了時のテキストでエディットを再開するプロファイル機能
+・拡張子の省略／複数パス指定によるファイルサーチ
+・ファイル拡張子によるタブカラム数（８／４）の自動切換え
+・ＦＥＰ（ＶＪＥβ、松茸、ＡＴＯＫ）の自動ＯＮ／ＯＦＦ
+・[GRPH]、[NFER]キー対応（ezkey.com組込み時）
+・２０／２５行モード対応
+・ハイレゾリューションモード（２５／３１行）対応
+
+*【ＤＯＳ環境ツールとして】
+
+・各種文字列入力時の、ヒストリー機能（学習機能、先頭文字列による検索有り）
+・常駐モードにより、コマンドラインからワンキーで起動
+・アプリケーションから、常駐しているＶＺを呼び出し可能
+・エイリアス、マルチステートメント、環境変数の展開
+・コンソール出力の取込み機能による、エラーリスティングからのタグジャンプ
+・多機能ファイラー（選択ファイルに対するコマンド連続実行可能）
+・各種ホットキー機能をサポートした、ezkey.com 付属
+
+
+*【ユーザーフレンドリーな設計】
+
+・全てのキー割当て、メニュー、タイトル、カラー等は自由に設定可能
+・幅広いニーズに対応する、数種類の定義ファイル付属
+・操作モードに応じたオンラインヘルプ
+・Ｃライクな言語仕様、ＢＡＳＩＣライクなデバック環境を備えた、強力なマクロ機能
+　（各種サンプルマクロ付属）
+・オールアセンブラ記述により、高速・軽量（本体40KB、メモリ上52KB）
+・全ソース付属
+
+
+
+

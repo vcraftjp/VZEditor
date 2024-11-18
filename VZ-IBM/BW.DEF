@@ -1,0 +1,37 @@
+======== bw.def (IBM PC, mode MONO) ========
+;
+; a) vz +bw[Enter]
+;
+; b) VZIBM.DEF
+;	* Else
+;	1 bw
+;
+; c) replace on VZIBM.DEF
+;
+; 0:black, 1:gray+UL, 7:gray, 9:white+UL, $F:white
+
+* Options
+
+An$0F			;text attr
+Ac$07			;CR,TAB,EOF
+Al$07			;line numbers
+Ah$70			;block
+As$70			;status bar
+Ao$F0			;status bar(console)
+Ar$7F			;status bar(RO)
+Am$07			;message
+Ab$07			;menu border
+At$0F			;menu title
+Aw$07			;menu text
+Af$0F			;first letter
+Ai$70			;selection bar
+Aj$07			;help menu
+Ak$0F			;2-stroke key
+Au$7F			;filer cursor
+Ap$70			;function keys
+Ad$07			;command line
+Av$06			;cursor line
+
+*
+======== End of bw.def ========
+

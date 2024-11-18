@@ -1,0 +1,34 @@
+======== palet.def (IBM PC) ========
+
+* Macro
+
+60 ^[F11] "Change Palette"
+	?.
+	i=0,
+	p=pu,
+	dx=p, ax=$1009, &i($10)
+:A	i&=15,
+	&m("Palette %2d-%-2d(%02xh) Esc:exit, Enter:set, Ins:insert",i,p.i,p.i)
+:B	&k (r)?? >B
+	(r==$4D00)?{ i++, >A }
+	(r==$4B00)?{ i--, >A }
+	(r==$4800)?{ a=p.i, a++, >C }
+	(r==$5000)?{ a=p.i, a--, >C }
+	(r==$5200)? >02
+	(r==$1B)?{ dx=up, &m("") >> }
+	(r==$0D)?{ dx=up, ax=$1009, &i($10) &m(""). }
+:C	p.i=a&63, &01 >A
+
+1:	ax=$1002, &i($10)
+
+2:
+	?.
+	&m("")
+	&?("12	$"$$(")
+	i=0,
+:A	&?("%02x,",up.i) i++, (i<16)? >A
+	#h &?(")$"")
+
+*
+======== End of palet.def ========
+

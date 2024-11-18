@@ -1,0 +1,726 @@
+======== mi.def (v1.57) ========
+
+* C ƒRƒ}ƒ“ƒhƒL[
+
+00	^Q ^K [ESC]	;‚QƒXƒgƒ[ƒNƒL[iÅ‘å‚UŒÂj
+01	^B		:’¼‘O‚ÌƒRƒ}ƒ“ƒhŽÀs
+02	^@		:ƒL[ƒ{[ƒhƒ}ƒNƒ
+03	[ESC]		:ƒGƒXƒP[ƒv
+04	^M   [CR]	:ƒŠƒ^[ƒ“
+05	^E   [UP]	:ª
+06	^X   [DOWN]	:«
+07	^S   [<--]	:©
+08	^D   [-->]	:¨
+
+09	^A  ^[<--]	:‚PŒê©
+10	^F  ^[-->]	:‚PŒê¨
+11	^QS \[<--]	:˜_—s“ª
+12	^QD \[-->]	:˜_—s––
+13	^V   [INS]	:‘}“üƒ‚[ƒh
+14	^H   [BS]	:ƒoƒbƒNƒXƒy[ƒX
+15	^G   [DEL]	:‚P•¶Žšíœ
+16	    \[BS]	:Œê‚Ìæ“ª‚Ü‚Åíœ
+17	^T  \[DEL]	:Œê‚ÌI‚è‚Ü‚Åíœ
+18	^QT ^[BS]	:s“ª‚Ü‚Åíœ
+19	^QY ^[DEL]	:s––‚Ü‚Åíœ
+20	^U		:íœ•¶Žši—ñj•œŠˆ
+21	^I   [TAB]	:ƒ^ƒu
+22	^P		:§Œä•¶Žš“ü—Í
+23	^[		:‚PŒê‘å^¬•¶Žš•ÏŠ·
+24	^]		:•¶Žš—ñ‚Ì•¡ŽÊ	
+25			:ƒtƒ@ƒCƒ‹–¼‚Ì•¡ŽÊ
+
+30	^QP \[INS]	:P ƒy[ƒWƒ“ƒOƒ‚[ƒh
+31			:ƒ[ƒ‹ƒAƒbƒv
+32			:ƒ[ƒ‹ƒ_ƒEƒ“
+33			:ƒ[ƒ‹ƒAƒbƒv‚Qs
+34			:ƒ[ƒ‹ƒ_ƒEƒ“‚Qs
+35			:ƒy[ƒWƒAƒbƒv
+36			:ƒy[ƒWƒ_ƒEƒ“
+37	^QW ^[RLDN]	:ƒXƒ€[ƒXƒAƒbƒv
+38	^QZ ^[RLUP]	:ƒXƒ€[ƒXƒ_ƒEƒ“
+39	^QE ^[UP]	:‰æ–Ê‚Ìã’[
+40	^QX ^[DOWN]	:‰æ–Ê‚Ì‰º’[
+41	^QR		:ƒtƒ@ƒCƒ‹‚Ìæ“ª
+42	^QC		:ƒtƒ@ƒCƒ‹‚ÌÅŒã
+43	^QJ		:’¼‘O‚ÌƒJ[ƒ\ƒ‹ˆÊ’u
+44	^QM		:ƒJ[ƒ\ƒ‹ˆÊ’uƒ}[ƒN
+45	^QL		:Žw’ès”Ô†ƒWƒƒƒ“ƒv
+
+46	^KB  [F06]	:ƒuƒƒbƒNƒ‚[ƒh
+47	^Y   [F07]	:s¥ƒuƒƒbƒNíœ
+48	^KI  [F09]	:s¥ƒuƒƒbƒN‘}“ü
+49	^KK  [F08]	:s¥ƒuƒƒbƒN‹L‰¯
+50	^KC \[F09]	:s¥ƒuƒƒbƒN•¡ŽÊ
+51	^KY		:K ƒXƒ^ƒbƒN‚ÌÁ‹Ž
+52	^QK		:B ƒuƒƒbƒN‚Ìæ“ª^ÅŒã
+53	^N		:‚Ps‘}“ü
+54			:U s‚Ì‰ñ•œ
+
+55			:ŒŸõ•¶Žš—ñ‚ÌÝ’è
+56	^QA		:R •¶Žš—ñ‚Ì’uŠ·F  ”ÍˆÍŽw’è
+57			:C ‘O‰ñ‚Ì˜A‘±’uŠ·‚ÌÄŽÀs
+58	     ^Q[	:‘Î‰ž‚·‚é()[]{}<>
+59	^QG		:ŒŸõ•¶Žš—ñ‚ÌŽæ“¾
+60			:ƒ^ƒOî•ñ‚ÌŽæ“¾
+61			:I •¶Žš—ñ‚Ì‘I‘ð•¡ŽÊ
+
+62	     [CLR]	:ƒEƒBƒ“ƒhƒEØ‘Ö‚¦
+63	     [F02]	:•ÒWƒeƒLƒXƒgØ‘Ö‚¦
+64	     [F04]	:•ªŠ„ƒ‚[ƒhØ‘Ö‚¦
+65	    \[F04]	:•ªŠ„ˆÊ’u‚Ì•ÏX
+66			:L •\Ž¦s”Ø‘Ö‚¦ ($lc)
+67			:R Read onlyƒ‚[ƒh
+68	^QI		:I ƒCƒ“ƒfƒ“ƒg‚Ì•ÏX
+69			:C ƒeƒLƒXƒg‚Ì”äŠr
+
+70	     [ESC]N	:N V‚½‚Èƒtƒ@ƒCƒ‹‚Ì•ÒW
+71	     [ESC]R	:V*ƒtƒ@ƒCƒ‹‚ÌƒŠ[ƒh
+72			:V‹Kƒtƒ@ƒCƒ‹ƒI[ƒvƒ“
+73			:ƒtƒ@ƒCƒ‹‚ÌƒNƒ[ƒY
+74			:ƒNƒ[ƒY¥ƒI[ƒvƒ“
+75			:ƒtƒ@ƒCƒ‹‚ÌƒZ[ƒu
+76	     [ESC]W	:W*Šù‘¶ƒtƒ@ƒCƒ‹‚Ö’Ç‰Á
+77			:ƒGƒfƒBƒ^‚ðI—¹
+78	^QH \[F02]	:DOSƒRƒ}ƒ“ƒhŽÀs
+79	    \[ESC]	:D DOS‰æ–Êo—Í‚ÌŽQÆ
+
+80	^K^		:ÄƒJƒXƒ^ƒ}ƒCƒY
+81	^K_		:ƒL[ƒ{[ƒhƒ}ƒNƒ•¶‘}“ü
+82	     [ESC]R	:R ƒtƒ@ƒCƒ‹–¼‚Ì•ÏX
+83			:ƒvƒƒtƒ@ƒCƒ‹î•ñ‚ÌƒZ[ƒu
+
+88	    \[<--]	:‘I‘ð©			; Filer
+89	    \[-->]	:‘I‘ð¨			;
+90	    \[UP]	:‘I‘ðª			;
+91	    \[DOWN]	:‘I‘ð«			;
+92	     [CLR]	:æ“ª^ÅŒã		;
+93	     [TAB]	:ƒEƒBƒ“ƒhƒEØ‘Ö‚¦	;
+94           [BS]       :eƒfƒBƒŒƒNƒgƒŠ         ;
+
+95	\[ESC]		:DOS‰æ–Êo—Í‚ÌŽQÆ	; DOS
+96	^W		:ƒGƒCƒŠƒAƒXˆê——		;
+97	^[CR]		:ƒRƒ}ƒ“ƒh‚Ì“WŠJÄ•\Ž¦	;
+98	\[CR]		:ƒtƒ@ƒCƒ‰[		;
+
+* F ƒtƒ@ƒ“ƒNƒVƒ‡ƒ“ƒL[•\Ž¦
+
+"FILE","TEXT","JUMP","SPLIT","FIND","SEL","CUT","COPY","PASTE","TAG"
+"mode","dos","str","split", "find", "sel","macro","misc","paste","dup"
+
+* T ƒeƒLƒXƒgƒEƒBƒ“ƒhƒE
+
+"•ÒWƒtƒ@ƒCƒ‹–¼ <$pd>",50
+"",1
+"",1
+"’Ç‰Áƒtƒ@ƒCƒ‹–¼",50
+"ƒpƒX¥ƒ}ƒXƒN",50
+"ŒŸõ•¶Žš—ñ",50
+"’uŠ·•¶Žš—ñ",50
+"•¡ŽÊ•¶Žš—ñ",50
+"s”Ô†",1
+"ƒtƒ@ƒCƒ‹–¼ <$pd>",50
+
+* S ƒVƒXƒeƒ€ƒƒjƒ…[
+
+1	"ƒ}ƒNƒƒƒjƒ…[",40,0,28
+2	"ƒGƒCƒŠƒAƒXˆê——",40,0,10,-1
+3	"•ÒWƒeƒLƒXƒg‚ÌØ‘Ö‚¦",37,0
+
+4	"’uŠ·‚·‚é”ÍˆÍ‚ÍH",14,3
+	"A ƒeƒLƒXƒg‘S‘Ì"
+	"F ƒJ[ƒ\ƒ‹ˆÈ~"
+	"B ƒJ[ƒ\ƒ‹ˆÈ‘O"
+
+5	"",13,7
+	"W *.*"
+	"Q ."
+	"C .h .c"
+	"A .inc .asm"
+	"E .exe .com"
+	"B .bat"
+	"D .doc .txt"
+
+6	"",16,7
+	"F ƒtƒ@ƒCƒ‹–¼"
+	"E Šg’£Žq"
+	"N V‚µ‚¢‡"
+	"O ŒÃ‚¢‡"
+	"L ‘å‚«‚¢‡"
+	"S ¬‚³‚¢‡"
+	"D ƒfƒBƒŒƒNƒgƒŠ"
+
+7	"",14,6
+	"C ”äŠr‚ÌŽÀs"
+	"E ‘¶Ý"
+	"N V‚µ‚¢"
+	"O ŒÃ‚¢"
+	"L ‘å‚«‚¢"
+	"S ¬‚³‚¢"
+
+8	"",15,9
+	"C ƒRƒs[	copy %1 %2"
+	"D íœ		del "
+	"P ƒpƒbƒN	lha a %2 %*"
+	"U ƒAƒ“ƒpƒbƒN	lha x "
+	"V ƒpƒbƒNƒŠƒXƒg	lha l "
+	"A ”äŠr(Asc)	fca %1 %2"
+	"B ”äŠr(Bin)	fcb %1 %2"
+	"T ƒeƒXƒg	dir "
+	"X ŽÀs		%1 %2"
+
+9	"",0,3
+	"com"
+	"exe"
+	"lzh lha l "
+
+* M ƒ}ƒNƒ
+
+2 [F01] "ƒtƒ@ƒCƒ‹‚Ì‘€ì"
+	?. !01
+
+3 [F03] "ƒJ[ƒ\ƒ‹‚ÌˆÚ“®"
+	?. !02
+	(r)>?{ #41 #45 >A >A >A >A >A &59 #42 } .
+:A	n=(r-1)%5, &#43(n) .
+
+4 \[F01] "ŠeŽíƒ‚[ƒh‚ÌÝ’è"
+	?. !03
+	(r== 4)?{ #66 . }
+
+5 \[F07] "ƒ}ƒNƒ‚Ì‘€ì"
+	?. !06
+
+6 \[F08] "‚»‚Ì‘¼‚ÌƒRƒ}ƒ“ƒh"
+	?. !07
+
+;--- ƒtƒ@ƒCƒ‹‚Ì‘€ì ---
+
+10 [ESC]E "E ƒeƒLƒXƒg‚Ì•Û‘¶‚ÆI—¹"
+	?. (wc==1)? #83 #C (s==4)?'Y'
+
+11 [ESC]S "S ƒeƒLƒXƒg‚ÌƒZ[ƒu"
+	?. mb-,	#S #m
+
+12 [ESC]Q "Q ƒeƒLƒXƒg‚ð•úŠü"
+	?. #] (mr!=1)? { #C .}
+	&a(37) (r>0)? { #C 'N' }
+
+13 [ESC]O "O •ÒW‚Ì‚â‚è’¼‚µ"
+	?. (mr!=1)?.
+	&a(37) (r>0)? { &s #L 'n' #P #m &d }
+
+14 [ESC]D "D ƒeƒLƒXƒg‚Ì“ñd‰»"
+	?. (wt)? >A
+	(wn==0 || wc==tc)?{ &m(6). }
+	&s sn[, sn-,
+	&#Y(0) l=ln, ly[,
+	#R #P #m mr=$80,
+	ky], ev[, ev-, &#J(l) ev], #W
+	sn], &d #Y .
+:A	(mr<=1)?{ #W (mr<=1)?{ #W . }}
+	#C (wt)?{ #W &#Y(0) }
+
+15 [ESC]A "A ‘SƒeƒLƒXƒg‚Ì•Û‘¶‚ÆI—¹"
+	?. #Q (s==4 && r)? 'Y'
+
+16 [ESC]X "0 ƒGƒfƒBƒ^‚ÌI—¹"
+	?. #[
+
+17 [ESC]I "I ƒJ[ƒ\ƒ‹ˆÊ’u‚Ö‘}“ü"
+	?. (mr==$80)?{ &m(36) . }
+	&m("ƒJ[ƒ\ƒ‹ˆÊ’u‚Öƒtƒ@ƒCƒ‹‚ð“Ç‚Ýž‚Ý‚Ü‚·")
+	n=wn, c=wc,
+	#R
+:A	(s)?{ &c >A }
+	(wc==c)? >Z
+	mr=-1,
+	&s
+	#W &#T(n)
+:B	#W &#T(c+1)
+	#b #_ (ct)?{ #> #m #x }
+:C	#y (mb)?{ #W #< #i (ek)?? #B #W >C }
+	#C &#T(n)
+	#< #i (ek)?? #B
+	(wc>c)? >B
+ 	&d
+:Z	&m("")
+
+;--- •¶Žš—ñ‚Ì‘€ì ---
+
+20 \[F03] "•¶Žš—ñ‚ÌŒŸõ¥’uŠ·"
+	?. sy[, sy+,
+	!05
+	(r==2)?{ &01 "FN" >Z }
+	(r==3)?{ &01 "FY" }
+:Z	sy],
+
+1:	#56
+:A	(s)??{ sy], / } (s==1)?{ &l >A }
+
+21 ^QF "•¶Žš—ñ‚Ì«ŒŸõ"
+	?. mp[, #F &l mp], (r)?. >26
+
+22 ^QB "•¶Žš—ñ‚ÌªŒŸõ"
+	?. mp[, #F &l mp], (r)?. >28
+
+23 ^^ "ƒJ[ƒ\ƒ‹•¶Žš—ñ‚Ì«ŒŸõ"
+	?. mp[, #G mp], >26
+
+24 ^\ "ƒJ[ƒ\ƒ‹•¶Žš—ñ‚ÌªŒŸõ"
+	?. mp[, #G mp], >28
+
+26 ^L [F05] "«ŒŸõ"
+	?. mp[, mp=2, #c mp],
+
+28 ^O \[F05] "ªŒŸõ"
+	?. mp[, mp=2, #r mp],
+
+;--- ƒJ[ƒ\ƒ‹‚ÌˆÚ“® ---
+
+30 \[<--] "‰æ–Ê‚Ì¶’["
+	&x(0)
+
+31 \[-->] "‰æ–Ê‚Ì‰E’["
+	&x(wd-2)
+
+32 ^W "ƒ[ƒ‹ƒAƒbƒv"
+	?. ky=ly, #w (r)?.
+	(ly==ky && ly<wy-2)? #x
+
+33 ^Z "ƒ[ƒ‹ƒ_ƒEƒ“"
+	?. ky=ly, #z (r)?.
+	(ly==ky && ly)? #e
+
+35 ^R [RLDN] "ƒy[ƒWƒAƒbƒv"
+	?. (fc==0||mp)?{ #r . }
+	&01 (r){ #w (r)?. }
+
+37 ^C [RLUP] "ƒy[ƒWƒ_ƒEƒ“"
+	?. (fc==0||mp)?{ #c . }
+	&01 (r){ #z (r)?. }
+1:	n=wy, (Eh)? (n/=2) ? (n--) (n)
+
+38 \[UP] "‚‘¬ƒXƒNƒ[ƒ‹ƒAƒbƒv"
+	(s==3)?{ #90 . } (s)?.
+	(wt && fd)?{ #w #W #w #W . }
+	(fb)?? { #33 . }
+	(-1){ #e (ks&1)??. }
+
+39 \[DOWN] "‚‘¬ƒXƒNƒ[ƒ‹ƒ_ƒEƒ“"
+	(s==3)?{ #91 . } (s)?.
+	(wt && fd)?{ #z #W #z #W . }
+	(fb)?? { #34 . }
+	(-1){ #x (ks&1)??. }
+
+40 \[RLDN] "‘¼‰æ–Êƒ[ƒ‹ƒAƒbƒv"
+	?. (wt)?{ #W #w #W }
+
+41 \[RLUP] "‘¼‰æ–Êƒ[ƒ‹ƒ_ƒEƒ“"
+	?. (wt)?{ #W #z #W }
+
+42 [ESC]0 "s”Ô†ƒWƒƒƒ“ƒv"
+	?. #J &o('0'+r) &l
+
+43 ^J "ƒ}[ƒN"
+	?. &m("ƒ}[ƒN”(0-4)‚ð“ü—Í‚µ‚Ä‰º‚³‚¢")
+:A	&k (r==0)?>A
+	(r>='0' && r<='4')??{ &m("") . }
+	i=r-'0', &#M(i) &m("ƒ}[ƒN #%d",i)
+
+44 ^Q0 "ƒ}[ƒNƒWƒƒƒ“ƒv"
+	?. &#U(r)
+
+45 ^[CLR]  "•\Ž¦ˆÊ’u•ÏX"
+	?. y=wy-1,y/=2,
+	(ly==y)?{ ky=wy-2, >A }
+	(ly==1)?{ ky=y, >A }
+	ky=1,
+:A	&d #]
+
+46 [F10] "ƒ^ƒOƒWƒƒƒ“ƒv"
+	?. #60 (r)?.
+	#O #e #m
+
+;--- ‚»‚Ì‘¼ ---
+
+50 \[CR] "ƒJ[ƒ\ƒ‹s‚Ì‰º‚É‚Ps‘}“ü"
+	(s==2)? #98 (s)?.
+	mi[, mi-, #> #m mi],
+
+51 \[F10] "s‚Ì•¡»"
+	?. #k #i
+
+52 \[CLR] "‘S‰æ–Ê•\Ž¦"
+	(s==1) ? { #P . }		;•¶Žš—ñ“ü—Í‚Ì‚Æ‚«‚Íƒtƒ@ƒCƒ‹–¼
+	(s)? .
+	&#Y(0)
+
+53 ^QN "s”Ô†•\Ž¦"
+	?. dl!, &d #]
+
+54 ^QQ "ƒJ[ƒ\ƒ‹s‚Ì‘‚«’¼‚µ"
+	?. #? #x
+
+55 [ESC]T "TABƒTƒCƒY‚Ì•ÏX"
+	?. ht=12-ht, &d
+
+56 [ESC]^ "ŠO•”ƒ}ƒNƒ‚ÌŽÀs"
+	?. #O &?(pi) "*.def" #m
+:A	(s)?{ &c >A } (r<0)?.
+	#80 (r)?.
+	#C >*
+
+57 [ESC]@ "ƒ}ƒNƒ•¶‚ÌŽÀs"
+	?. &g("yƒ}ƒNƒ•¶z")
+	(r==-1)?.
+	&e(pw)
+	&m("Result: %d %u $%x '%c' $"%16s$"",r,r,r,r,r)
+	&d
+
+58 ^[TAB] "•¶Žš—ñ‚Ì•âŠ®"
+	?. (lx)??.
+	&s mp[,
+	(cm)?{ x=lx, i=2, }?{ &x(x) #t i++, }
+	#a #G #61 ' ' #h (i){ #e } #m #t
+	mp], #? cm=0, 
+
+59 ^KU "ƒy[ƒXƒg‚ÌUNDO"
+	?. mb=r, #y
+
+;--- ‹éŒ`ƒuƒƒbƒN‚Ì‘€ì ---
+
+61 \[F06] "‹éŒ`ƒuƒƒbƒNƒ‚[ƒh"
+	?.
+	#b (mb)?{ mb=4, xb=lx, }
+
+62 [F07] "‹éŒ`ƒuƒƒbƒNíœ"
+	m-,
+	>01
+
+63 [F08] "‹éŒ`ƒuƒƒbƒN‹L‰¯"
+	m+,
+	>01
+1:
+	?.
+	(mb != 4)?{ (m)? #k ? #y . }
+	&s
+	xx=-1, (kx > xb)? xx=kx,
+	n=ln, #b #B (ln < n)?{ n=ln, #B }
+	cc=0,
+:A	(ln <= n)? >Z #e
+	&x(xb) #b
+	(xx < 0)? #> ? &x(xx)
+	(m)? #k ? #y
+	cc++, >A
+:Z	&d	
+
+64 [F09] "‹éŒ`ƒuƒƒbƒN‘}“ü"
+	?.
+	(cc)??{ #i . }
+	xx=lx,
+	ei[, ek[, ei-, ek-,
+	&s
+:A	(ct <= 1)?{ #> &#68(xx) #> }
+	#i #x (r)?{ #> #m }
+	(cc--)? >A
+	ek], ei],
+	&d
+
+65 [ESC]] "] s––‚ÌSPACE¥TAB‚Ìíœ"
+	?.
+	(mb)??.
+	&s
+	n=ln, #b #B (ln > n)?{ n=ln, #B }
+:A	(ln >= n)? >Z
+	#>
+	(lx)?{
+		#s (ct == 2)?{ #d #16 }
+	}
+	#x >A
+:Z	&d
+
+* Pop up menu
+
+1	"", 26, 12
+	&10 &11 &12 &13 &14 #82 &15 &16 &17 #76 #71 #70
+
+2	"", 24, 9
+	"T ƒeƒLƒXƒg‚Ìæ“ª‚Ö"
+	"G Žw’è‚·‚és”Ô†‚Ö"
+	"1 ƒ}[ƒN‚P‚Ö"
+	"2 ƒ}[ƒN‚Q‚Ö"
+	"3 ƒ}[ƒN‚R‚Ö"
+	"4 ƒ}[ƒN‚S‚Ö"
+	"5 ’¼‘O‚ÌƒJ[ƒ\ƒ‹ˆÊ’u‚Ö"
+	"U ƒy[ƒXƒg‚ÌUNDO"
+	"B ƒeƒLƒXƒg‚ÌÅŒã‚Ö"
+
+3	"ŠeŽíƒ‚[ƒh‚ÌÝ’è", 36, 14, 7
+	"E Šg’£ƒƒjƒ…[",		!04
+	"S*ƒVƒXƒeƒ€î•ñ‚Ì•\Ž¦",		Ds
+	"N s”Ô†‚Ì•\Ž¦",		Dl
+	"C*CRˆÈ~‚Ö‚ÌƒJ[ƒ\ƒ‹ˆÚ“®	‹–‰Â ‹ÖŽ~", En
+	"D —¼‰æ–ÊƒXƒNƒ[ƒ‹",		fd
+	"I ƒI[ƒgƒCƒ“ƒfƒ“ƒg",		Ei
+	"U ƒJ[ƒ\ƒ‹sƒAƒ“ƒ_[ƒ‰ƒCƒ“",	Du
+	"R CR ‚Ì•\Ž¦",			Dc
+	"T TAB‚Ì•\Ž¦",			Dt
+	"F ŒŸõŽž‚Ì‰p‘å/¬•¶Žš	‹æ•Ê “¯ˆêŽ‹", Ec
+	"W*ƒ[ƒhƒT[ƒ`",		Ew
+	"G ƒfƒtƒHƒ‹ƒg‚Ì‰¡•(2`250)",WD
+	"M •ÒWƒeƒLƒXƒg‚Ì‰¡•(2`250)",WE
+	"H*ƒy[ƒWƒ“ƒO’PˆÊ	‘S‰æ–Ê ”¼‰æ–Ê",	Eh
+
+4	"", 36, 13, 7
+	"M ƒƒCƒ“ƒƒjƒ…[",		!03
+	"R ROLL UP/DOWN‚Ì“®ì	¼Þ¬ÝÌß ½Ñ°½",fc
+	"E EOF‚Ì•\Ž¦",			De
+	"B ƒoƒbƒNƒAƒbƒv‚Ìì¬",		Eb
+	"2 ‚Q‚O^‚Q‚Tsƒ‚[ƒh        $lc"
+	"N s”Ô†ƒ‚[ƒh	˜_—s •\Ž¦s",	Dn
+	"F ƒtƒ‹ƒpƒX–¼‚Å•\Ž¦",		Df
+	"H ƒ^ƒu‚ÌƒJƒ‰ƒ€”",		HT
+	"L ‚Pƒy[ƒW‚Ìs”",		PG
+	"T TAB¨SPACE•ÏŠ·",		Eu
+	"\*ƒoƒbƒNƒXƒ‰ƒbƒVƒ…	\ \",	Db
+	"Q*•ÒWI—¹Žž‚Ì“®ì	Cont Quit",Sq
+	"S [SHIFT]+[«][ª]	‚‘¬ ’´‚‘¬",fb
+
+5	"", 28, 7
+	"F •¶Žš—ñ‚Ì‘O•û « ŒŸõ",	&21
+	"B •¶Žš—ñ‚ÌŒã•û ª ŒŸõ",	&22
+	"Q •¶Žš—ñ‚Ì’uŠ·F  Šm”F‚ ‚è"
+	"A •¶Žš—ñ‚Ì’uŠ·F  Šm”F‚È‚µ"
+	#56 #61 #57
+
+6	"ƒ}ƒNƒ‚Ì‘€ì", 24, 5
+	"ƒ}ƒNƒƒƒjƒ…[",!99
+	#80 #81 &56 &57
+
+7	"", 24, 9
+	#30 #51 #52 #54 #67 #68 #69 #79 &65
+
+;======== mihelp.def ========
+
+* M ƒ}ƒNƒ
+
+1 [HELP] "ƒwƒ‹ƒv"
+	(s>1)? >A
+	(cd=='%')? >D
+	(cd=='#')?? >A
+	#d c=cd,
+	(c>='<' && c<='z')?{ #s i=c-'<', r=pv.i, >C }
+	&n r[, #s r], (r>=0)? >C
+:A	(s)>? { !01 !02 !03 !04 }
+:B	(r>=0 || r==-1 || r==-256)?.
+:C	(r==1~)?.		; 1=ƒwƒ‹ƒv‚Ìƒ}ƒNƒ”
+	!00 (r&$FF)? >B >A
+:D	mp[, ec[, ly[, ec-,
+	&s
+	#b #d #d #G
+	#c (r)? { ky[, #^ ky], #c }
+	ly],ec],mp],
+	&d #]
+
+* P ƒƒjƒ…[
+
+0	"It's ...",42,1,24,-1 #00
+
+1	"ƒXƒNƒŠ[ƒ“ƒGƒfƒBƒbƒg",18,8
+	"C ƒJ[ƒ\ƒ‹‚ÌˆÚ“®",!11
+	"R ƒXƒNƒ[ƒ‹‚ÆƒWƒƒƒ“ƒv",!12
+	"L Šî–{•ÒW‘€ì",!13
+	"B ƒJƒbƒg•ƒy[ƒXƒg",!14
+	"S •¶Žš—ñ‚Ì‘€ì",!15
+	"F ƒtƒ@ƒCƒ‹¥ƒEƒBƒ“ƒhƒE",!16
+	"M ƒ}ƒNƒ‘€ì",!17
+	"E ‚»‚Ì‘¼",!18
+
+2	"ƒeƒLƒXƒgƒEƒBƒ“ƒhƒE",18,2
+	"C ƒJ[ƒ\ƒ‹‚ÌˆÚ“®",!19
+	"L Šî–{•ÒW‘€ì",!13
+
+3	"ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“",18,3
+	"C ƒJ[ƒ\ƒ‹‚ÌˆÚ“®",!19
+	"L Šî–{•ÒW‘€ì",!13
+	"E ‚»‚Ì‘¼",!20
+
+4       "ƒtƒ@ƒCƒ‰[",42,11,24,-1
+        #05 #06 #07 #08 #88 #89 #90 #91 #92 #93 #94
+
+11	"",42,13,24,-1
+	#05 #06 #07 #08 #09 #10 #11 #12 &30 &31 #39 #40 &45
+
+12	"",42,20,24,-1
+	&32 &33 &35 &37 &38 &39 &40 &41 #37 #38 #41 #42 #43 #44 #45
+	&42 &43 &44 &46 #30
+
+13	"",42,12,24,-1
+	#13 #14 #15 #16 #17 #18 #19 #20 #21 #22 #23 #24
+
+14	"",42,11,24,-1
+	#46 &61 #47 #48 #49 #50 &51 &59 #51 #52 &65
+
+15	"",42,10,24,-1
+	&21 &22 &23 &24 &26 &28 #56 #58 #59 &58
+
+16	"",42,17,24,-1
+	&10 &11 &12 &13 &14 #82 &15 &16 &17 #76 #71 #70
+	#62 #63 #64 #65 &52
+
+17	"",42,5,24,-1
+	#02 #81 &05 &56 &57
+
+18	"",42,11,24,-1
+	#01 #04 #53 &50 #54 &53 &55 #68 #78 #79 #80
+
+19	"",42,8,24,-1
+	"ƒqƒXƒgƒŠ[ª",#05
+	"ƒqƒXƒgƒŠ[«",#06
+	#07 #08 #09 #10 #11 #12
+
+20	"",42,6,24,-1
+	"ƒGƒfƒBƒ^‚Ö",#03
+	"DOSƒRƒ}ƒ“ƒhŽÀs",#04
+	#95 #96 #97 #98
+
+;======== End of mihelp.def ========
+
+* O ƒIƒvƒVƒ‡ƒ“
+
+Bt16			;ƒeƒLƒXƒgƒoƒbƒtƒ@‚ÌƒTƒCƒY (16..64KB)
+Bq0			;ƒeƒ“ƒ|ƒ‰ƒŠƒoƒbƒtƒ@‚ÌƒTƒCƒY: ƒƒ‚ƒŠ(KB)/EMS(page)
+Bf32			;DOSƒRƒ}ƒ“ƒh—pƒƒ‚ƒŠ‚ÌÅ¬’l (KB)
+Bo32			;ƒRƒ“ƒ\[ƒ‹o—ÍŽæž‚Ýƒoƒbƒtƒ@ƒTƒCƒY (0..32KB)
+GV0			;— ‚u‚q‚`‚lŽg—pƒ‚[ƒh
+			;(0=Žg—p‚µ‚È‚¢, 1=A8..B7, 2=B0..BF, 3=B8..BF/E0..E7)
+EM			;‚d‚l‚r‚ÌŽg—pƒy[ƒW” (0..128, EM=Žc‚è‘S•”)
+SW1			;ƒXƒƒbƒvƒ‚[ƒh
+			;(0=OFF, 1=text, 2=text&code, 3=TSR 2.6KB)
+
+Bm2048			;ƒ}ƒNƒƒoƒbƒtƒ@‚ÌƒtƒŠ[ƒGƒŠƒA
+Ba0			;ƒGƒCƒŠƒAƒXƒoƒbƒtƒ@	V
+Hs256			;•¶Žš—ñƒqƒXƒgƒŠ[	V
+Hf128			;ƒtƒ@ƒCƒ‹–¼		V
+Hx128			;DOSƒRƒ}ƒ“ƒhƒ‰ƒCƒ“	V
+Ha64			;ƒAƒvƒŠƒP[ƒVƒ‡ƒ“	V
+Bl1024			;sƒoƒbƒtƒ@ƒTƒCƒY (256..(Bt*1024/8))
+Bc256			;íœ•¶Žš—ñƒoƒbƒtƒ@ƒTƒCƒY
+Bu64			;ƒ}ƒNƒ”z—ñ—ÌˆæƒTƒCƒY
+
+TC10			;ƒI[ƒvƒ“‰Â”\‚ÈƒeƒLƒXƒg”
+WD80			;•\Ž¦ƒJƒ‰ƒ€” (2..250)
+PG0			;•\Ž¦s”Ô†‚Ìƒy[ƒW”
+RS3			;ƒXƒ€[ƒXƒXƒNƒ[ƒ‹‘¬“x (0..4)
+Ta8			;ƒ^ƒuƒJƒ‰ƒ€”
+Tb4			;.C .H ‚Ìƒ^ƒuƒJƒ‰ƒ€”
+Ci5			;ƒJ[ƒ\ƒ‹Œ`ó (‘}“ü) (0..15)
+Co4			;	V@  (ã‘)
+FW256			;ƒfƒBƒŒƒNƒgƒŠƒoƒbƒtƒ@‚Ì”
+FV5			;ƒfƒBƒŒƒNƒgƒŠ•\Ž¦ƒ‚[ƒh (1=ƒƒ“ƒO, 5=ƒVƒ‡[ƒg)
+FS0			;ƒfƒBƒŒƒNƒgƒŠƒ\[ƒgƒIƒvƒVƒ‡ƒ“ (b0..b6)
+FO3			;ƒfƒBƒŒƒNƒgƒŠƒRƒ“ƒyƒAƒIƒvƒVƒ‡ƒ“ (b0..b4)
+WL0			;ƒEƒBƒ“ƒhƒE‚Ì•\Ž¦ˆÊ’u (0..15)
+LC-			;ƒGƒfƒBƒbƒgŽž‚Ì‰æ–Ês” (-/20/25)
+
+An7			;ƒeƒLƒXƒg‘®«
+Ac6			;@ƒRƒ“ƒgƒ[ƒ‹•¶Žš
+Al5			;@s”Ô†
+Ah15			;@ƒuƒƒbƒN
+As13			;@ƒXƒe[ƒ^ƒXƒo[
+Ao14			;@ƒRƒ“ƒ\[ƒ‹ƒtƒ@ƒCƒ‹
+Ar12			;  Read onlyƒtƒ@ƒCƒ‹
+Am6			;@ƒƒbƒZ[ƒW
+Ab13			;@ƒEƒBƒ“ƒhƒE‚í‚­
+At13			;@ƒEƒBƒ“ƒhƒEƒ^ƒCƒgƒ‹
+Aw7			;@ƒEƒBƒ“ƒhƒE•¶Žš
+Af5			;@ƒEƒBƒ“ƒhƒEæ“ª•¶Žš
+Ai14			;@ƒEƒBƒ“ƒhƒEƒJ[ƒ\ƒ‹
+Aj6			;@ƒwƒ‹ƒvƒEƒBƒ“ƒhƒE
+Ak6			;@ƒL[ƒ‚[ƒh
+Ag1			;@ƒtƒ@ƒCƒ‰[”wŒi
+Au6			;@ƒtƒ@ƒCƒ‰[ƒJ[ƒ\ƒ‹
+
+Dl-			;s”Ô†‚Ì•\Ž¦
+Dc+			;CR ‚Ì•\Ž¦
+Dt-			;TAB‚Ì•\Ž¦
+De+ 			;EOF‚Ì•\Ž¦
+Ds-			;ƒVƒXƒeƒ€î•ñ‚Ì•\Ž¦
+Db-			;•¶Žš‚Ì•\Ž¦
+Dn-			;˜_—^•\Ž¦s”Ô†
+Du+			;ƒJ[ƒ\ƒ‹sƒAƒ“ƒ_[ƒ‰ƒCƒ“
+Df+			;ƒtƒ‹ƒpƒX–¼‚Å•\Ž¦
+Dp-			;ƒtƒ@ƒCƒ‹–¼‚Ì¬•¶Žš•\Ž¦
+Dh+                     ;ƒtƒ@ƒCƒ‹–¼‚ð¶‘¤‚É•\Ž¦
+Dg-                     ;V‚i‚h‚rŒrü‚Ì•\Ž¦
+
+Ei-			;ƒI[ƒgƒCƒ“ƒfƒ“ƒg
+Es+			;^QE,^QX ‚ÅƒXƒ€[ƒXƒXƒNƒ[ƒ‹
+Ez+			;EOF ƒR[ƒh‚Ì•t‰Á
+Eb+			;ƒoƒbƒNƒAƒbƒvƒtƒ@ƒCƒ‹‚Ìì¬
+Eu-			;[TAB]‚ÅƒXƒy[ƒXƒR[ƒh‚ð“ü—Í
+Et+			;ƒ^ƒCƒgƒ‹ƒT[ƒ`
+Eh+			;‘S^”¼‰æ–Êƒy[ƒWƒ“ƒO
+Ew-			;ƒ[ƒhƒT[ƒ`
+Ec-			;ŒŸõŽž‚Ì‰p‘å^¬•¶Žš‚Ì“¯ˆêŽ‹
+Ex-			;ƒeƒLƒXƒgƒXƒ^ƒbƒNfullŽž‚ÌŒx
+En+			;ƒJ[ƒ\ƒ‹‚ðs––ˆÈ~‚É•\Ž¦‚³‚¹‚È‚¢
+Ev+			;ƒWƒƒƒ“ƒvŒãƒJ[ƒ\ƒ‹‚ð‰æ–Ê‚Ì’†‰›‚Ö
+Ek+			;ƒuƒƒbƒNƒy[ƒXƒgŒãƒJ[ƒ\ƒ‹ˆÊ’uXV
+Ea-			;•\Ž¦ƒJƒ‰ƒ€”‚ÌŽ©“®Ý’è‹@”\
+RO-			;‚u‚‰‚…‚—ƒ‚[ƒh
+Ej-			;‘SŠpƒXƒy[ƒX‚ÌƒI[ƒgƒCƒ“ƒfƒ“ƒg
+
+Sx+			;ƒRƒ“ƒ\[ƒ‹o—Í‚ÌŽæž‚Ý
+Se+			;ƒGƒXƒP[ƒvƒV[ƒPƒ“ƒX‚ÌƒXƒLƒbƒv
+Sd+			;DOSƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚Ì“WŠJÄ•\Ž¦
+Sk-			;DOSƒRƒ}ƒ“ƒhŽÀs‘O‚ÉAƒeƒLƒXƒgƒXƒ^ƒbƒN‚ðƒNƒŠƒA
+Sr+			;editfile ‚Éƒvƒƒtƒ@ƒCƒ‹î•ñ‚ðƒZ[ƒu
+Sy-			;[CR]/[SPC] ‚Å [Y]/[N]
+;St-			;DEFƒtƒ@ƒCƒ‹‚Ìƒ^ƒCƒgƒ‹•\Ž¦
+Sn-			;V‹Kƒtƒ@ƒCƒ‹‚ÌŠm”F
+Sq+			;Close,Quit‚Å‘¦À‚ÉI—¹
+
+FP+			;vjeb/mttk/atok ‚ð§Œä
+FR-			;“ú–{Œê“ü—Íƒ‚[ƒh‚Å‹N“®
+FT0			;‚e‚d‚o‚Ìƒ^ƒCƒv (0=Ž©“®Ž¯•Ê, 1=vjeb, 2=mttk, 3=atok)
+FK-			;Šg’£ƒtƒ@ƒ“ƒNƒVƒ‡ƒ“ƒL[
+
+* A ƒGƒCƒŠƒAƒX
+
+cat	type
+ls	dir %-w %1
+sd	symdeb
+rene	ren %1 %<.%2
+fca	fc %1 %2%\%>
+fcb	fc /b %1 %2%\%>
+sete	set %1=%%1%
+test1	echo %: ; echo %& ; echo %.
+test2	echo %wd% %%a %1 %%1% %%a%
+
+* H ƒqƒXƒgƒŠ[
+
+:string
+	include define static extern typedef struct switch default return
+:file
+        \config.sys \autoexec.bat
+
+* E ‚»‚Ì‘¼
+
+1
+2	editfile
+3	.doc .txt .bat .def .H .C .inc .asm
+4	Drive  Mask  Path  Sort  View  Window  All  TrCD  RetCD  Compare  Exec
+5	0œ,.›1s2«3t4©5¡6¨7w8ª9x=V+¦*š-y/z
+6	0†¶,†Ö.†º1†¾2†Þ3†Æ4†¿5†á6†Ç7†®8†Î9†²=†¤+†£*†¢/†ª-†«
+7	*/;
+8	$6$pd>
+9	.com .exe .obj .lib .arc .lzh
+10	"$(95,96,9C,9D,9E,9F,88,97,1C,1F,1D)"
+;	   †¢ †¤ †® †² †¶ †º |   | ¨ « ©
+;11     ÞÁº¿¼²Ê·¸ÆÏÉØÓÐ×¾À½Ä¶ÅËÃ»ÝÂß°ÑÍÛÜÇÌ±³´µÔÕÖ
+
+*
+======== End of mi.def ========
+

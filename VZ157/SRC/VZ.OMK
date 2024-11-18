@@ -1,0 +1,59 @@
+ main.obj vz.inc main.asm
+main /ml;
+ alias.obj vz.inc alias.asm
+alias /ml;
+ char.obj vz.inc char.asm
+char /ml;
+ core.obj vz.inc core.asm
+core /ml;
+ disp.obj vz.inc disp.asm
+disp /ml;
+ dos.obj vz.inc dos.asm
+dos /ml;
+ expr.obj vz.inc expr.asm
+expr /ml;
+ filer.obj vz.inc filer.asm
+filer /ml;
+ gets.obj vz.inc gets.asm
+gets /ml;
+ harderr.obj vz.inc harderr.asm
+harderr /ml;
+ inst.obj vz.inc inst.asm
+inst /ml;
+ key.obj vz.inc key.asm key98.asm keyibm.asm dummy
+key /ml;
+ ledit.obj vz.inc ledit.asm
+ledit /ml;
+ macro.obj vz.inc macro.asm
+macro /ml;
+ memo.obj vz.inc memo.asm
+memo /ml;
+ menu.obj vz.inc menu.asm
+menu /ml;
+ misc.obj vz.inc misc.asm
+misc /ml;
+ open.obj vz.inc open.asm
+open /ml;
+ printf.obj sprintf.inc printf.asm
+printf /ml;
+ scrn.obj vz.inc scrn.asm scrn98.asm scrnibm.asm dummy
+scrn /ml;
+ smooth.obj vz.inc smooth.asm
+smooth /ml;
+ string.obj vz.inc string.asm
+string /ml;
+ text.obj vz.inc text.asm
+text /ml;
+ view.obj vz.inc view.asm
+view /ml;
+ wind.obj vz.inc wind.asm
+wind /ml;
+ xscr.obj vz.inc xscr.asm
+xscr /ml;
+ swap.obj vz.inc swap.asm
+swap /ml;
+ ems.obj vz.inc ems.asm
+ems /ml;
+ msg.obj vz.inc msg.asm dummy
+msg /ml;
+
