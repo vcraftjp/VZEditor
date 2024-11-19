@@ -1,9 +1,9 @@
-# VZEditor
+# VZ Editor
 <p align="center">
-<img alt="VZEditor" src="./images/image_01.png">
+<img alt="README.DOCr" src="./images/image_01.png">
 </p>
 
-この度、VZEditor Ver1.6を、フリーソフトウェアとして公開する運びとなりました。快諾して頂けた中村満氏に感謝いたします。古き良き(?)MS-DOSの時代に思いを馳せて頂ければ幸いです。
+この度、VZ Editor Ver1.6を、フリーソフトウェアとして公開する運びとなりました。快諾して頂けた中村満氏に感謝いたします。古き良き(?)MS-DOSの時代に思いを馳せて頂ければ幸いです。
 
 ## コンテンツ
 
@@ -32,7 +32,7 @@ Ver1.57です。最終的にはVer1.59Hまでアップデートされたよう�
 ## マクロ
 
 <p align="center">
-<img alt="VZEditor" src="./images/image_02.png">
+<img alt="GAME.DEF" src="./images/image_02.png">
 </p>
 
 VZ Editorは、ユーザの皆様によって本当に沢山のマクロが作成されましたが、作者と連絡を取れない関係でここには掲載できないのが残念です。
@@ -42,4 +42,20 @@ VZ Editorは、ユーザの皆様によって本当に沢山のマクロが作�
 
 https://github.com/user-attachments/assets/10da2571-1104-4342-a9ef-43c8dd2654c3
 
-なんと、VZマクロでドラクエ風RPGを作っちゃった人がいました！Ver1.6は互換性の問題で動かないようなので、Ver1.5Xが必要です。作者の斉木浩三さん、もしここ読まれてましたら、c_mos@twitter までご連絡ください。ぜひ掲載したいので。
+なんと、VZマクロでドラクエ風RPGを作っちゃった人がいました！Ver1.6は互換性の問題で動かないようなので、Ver1.5Xが必要です。作者の斉木浩三様、もしここを読まれましたら、c_mos@twitter までご連絡ください。ぜひ掲載したいので。
+
+## マニュアルカバー
+
+Ver1.0と1.6は、磯崎健一氏の作画。Ver1.5は素材の候補から選びました。寄り添っている親子のようでお気に入りです。
+
+### Ver1.0/1.5
+
+<p align="center">
+<img alt="VZ1.0カバー" width="360px" src="./images/manual_10.jpg"> <img alt="VZ1.5カバー" width="360px" src="./images/manual_15.jpg">
+</p>
+
+### Ver1.6
+
+<p align="center">
+<img alt="VZ1.6カバー表" width="360px" src="./images/manual_16f.jpg"> <img alt="VZ1.6カバー裏" width="360px" src="./images/manual_16b.jpg">
+</p>
