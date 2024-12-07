@@ -1,0 +1,144 @@
+#
+#  Makefile for VzFM	(Microsoft nmake)	94.3.4 by O.Kimura
+#
+#	Usage:  nmake R60
+#
+
+OBJECTS = main.obj alias.obj char.obj core.obj disp.obj dos.obj expr.obj \
+	filer.obj gets.obj harderr.obj inst.obj key.obj ledit.obj macro.obj \
+	memo.obj menu.obj misc.obj open.obj printf.obj scrn.obj smooth.obj \
+	string.obj text.obj view.obj wind.obj swap.obj ems.obj xscr.obj msg.obj
+
+HARD =
+#HARD = 16B
+#HARD = R60
+#HARD = R50
+#HARD = R30
+MACHINE = FM$(HARD)
+#HARD = FMT
+#MACHINE = TOWNS
+
+OPT =
+#OPT = /DNO_JIS83
+#OPT = /DNO_JIS83 /DFMX_NONOSTOP /DFMX_NOEXTVZBAK /DFMX_NOEXTFLATR \
+#	/DFMX_NOCVT98 /DFMX_NOCVTOAS
+
+MASM = /D$(MACHINE) $(OPT)
+
+.asm.obj:
+	masm /t /ml $(MASM) $*;
+#	ml /nologo /VM /I. /Zm /Cp /c /DNEWBLOCK $(MASM) $*.asm
+#	ml /nologo /VM /I. /Zm /Cp /c $(MASM) $*.asm
+
+default:	usage
+#default:	all
+#default:	vzfm
+
+all:	R60 R50 FMT 16B R30
+
+usage:
+	@echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	@echo     Usage:  nmake R60
+	@echo .
+	@echo             (R60 or R50 or R30 or FMT or 16B or all)
+	@echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+R60 R50 16B R30:
+	@$(MAKE) /nologo HARD=$@ MACHINE=FM$@ OPT="$(OPT)" vzfm
+
+FMT:
+	@$(MAKE) /nologo HARD=$@ MACHINE=TOWNS OPT="$(OPT)" vzfm
+
+vzfm:	dummy$(HARD) vz$(HARD).com
+	@dir vz$(HARD).com
+
+vz$(HARD).com:	$(OBJECTS)
+	link /nologo /noi /m @vz.lnk,$*,$*;
+	@exe2bin $*.exe $*.com
+	@del $*.exe
+
+main.obj:	vz.inc main.asm dummy
+alias.obj:	vz.inc alias.asm
+char.obj:	vz.inc char.asm
+core.obj:	vz.inc core.asm dummy
+disp.obj:	vz.inc disp.asm dummy
+dos.obj:	vz.inc dos.asm dummy
+expr.obj:	vz.inc expr.asm
+filer.obj:	vz.inc filer.asm
+gets.obj:	vz.inc gets.asm
+harderr.obj:	vz.inc harderr.asm
+inst.obj:	vz.inc inst.asm dummy
+key.obj:	vz.inc key.asm keyfm.asm dummy
+ledit.obj:	vz.inc ledit.asm
+macro.obj:	vz.inc macro.asm dummy
+memo.obj:	vz.inc memo.asm
+menu.obj:	vz.inc menu.asm
+misc.obj:	vz.inc misc.asm
+open.obj:	vz.inc open.asm
+printf.obj:	sprintf.inc printf.asm
+scrn.obj:	vz.inc scrn.asm scrnfm.asm dummy
+smooth.obj:	vz.inc smooth.asm dummy
+string.obj:	vz.inc string.asm
+text.obj:	vz.inc text.asm
+view.obj:	vz.inc view.asm
+wind.obj:	vz.inc wind.asm
+xscr.obj:	vz.inc xscr.asm
+swap.obj:	vz.inc swap.asm
+ems.obj:	vz.inc ems.asm
+msg.obj:	vz.inc msg.asm dummy
+
+
+cleanR60 cleanR50 cleanFMT clean16B:	dummyR30
+	del *.obj
+	@del dummyR30
+
+cleanR30:	dummyR60 dummyR50 dummyFMT dummy16B
+	del *.obj
+	@if exist dummyR60 del dummyR60
+	@if exist dummyR50 del dummyR50
+	@if exist dummyFMT del dummyFMT
+	@if exist dummy16B del dummy16B
+
+
+!IF "$(HARD)"!="R30"
+dummy$(HARD)::	dummyR30
+	@if exist dummyR30 del *.obj
+	@if exist dummyR30 del dummyR30
+!ENDIF
+!IF "$(HARD)"=="R60"
+dummyR60::	dummyR50 dummyFMT dummy16B
+	type nul >dummy
+	@type nul >$@
+!ENDIF
+!IF "$(HARD)"=="R50"
+dummyR50::	dummyR60 dummyFMT dummy16B
+	type nul >dummy
+	@type nul >$@
+!ENDIF
+!IF "$(HARD)"=="FMT"
+dummyFMT::	dummyR60 dummyR50 dummy16B
+	type nul >dummy
+	@type nul >$@
+!ENDIF
+!IF "$(HARD)"=="16B"
+dummy16B::	dummyR60 dummyR50 dummyFMT
+	type nul >dummy
+	@type nul >$@
+!ENDIF
+!IF "$(HARD)"=="R30"
+dummyR30::	dummyR60 dummyR50 dummyFMT dummy16B
+	del *.obj
+	@type nul >dummy
+	@type nul >$@
+!ENDIF
+
+# pseudo target for other HARD
+
+dummyR60::
+dummyR50::
+dummyFMT::
+dummy16B::
+dummyR30::
+
+clean:
+	rm -f vz*.com vz*.map *.obj *.bak dummy*
