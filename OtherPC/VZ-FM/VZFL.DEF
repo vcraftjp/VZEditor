@@ -1,0 +1,151 @@
+======== vzfl.def (v1.6) ========
+
+* T テキストウィンドウ
+
+"名前の変更",14
+"ﾃﾞｨﾚｸﾄﾘ名",14
+"DOSコマンド: <$pd>",40
+"【$pm】 <$pd>",40
+"$pm先：",20
+
+* S システムメニュー
+
+5	"",13,10
+	"W *.*"
+	"Q ."
+	"C .h .c"
+	"S .inc .asm"
+	"E .exe .com"
+	"D .doc .txt"
+	"T <Text>"
+	"B <Binary>"
+	"A <Archive>"
+	"H <Hidden>"
+
+6	"",16,7 "F ファイル名" "E 拡張子" "N 新しい順" "O 古い順" "L 大きい順" 	"S 小さい順" "D ディレクトリ"
+
+7	"",14,6	"C 比較の実行" "E 存在" "N 新しい" "O 古い" "L 大きい" "S 小さい"
+
+#if FMRH FMRM TOWNS FM16B
+8	"",13,10
+	"C コピー	copy %1 %2"
+	"D 削除		del "
+	"P LHA圧縮	%!lha a %2%/%F %@3"
+	"U LHA解凍	%!lha x %1 %2%G%\"
+	"V LHA表示	%!lha l "
+	"A 比較(Asc)	fca %1 %2"
+	"B 比較(Bin)	fcb %1 %2"
+	"T テスト	dir "
+	"X 実行		%1 %2"
+	"E ｺﾏﾝﾄﾞﾗｲﾝ",	#H
+#else
+8	"",13,10
+	"C コピー	copy %1 %2"
+	"D 削除		del "
+	"P LHA圧縮	%!lha a %2%F %@3"
+	"U LHA解凍	%!lha x %1 %2%G%\"
+	"V LHA表示	%!lha l "
+	"A 比較(Asc)	fca %1 %2"
+	"B 比較(Bin)	fcb %1 %2"
+	"T テスト	dir "
+	"X 実行		%1 %2"
+	"E ｺﾏﾝﾄﾞﾗｲﾝ",	#H
+#endif
+
+9	"",0,7
+	"com"
+	"exe"
+	"BAT"
+	"lzh %!lha l "
+	"LZH lha x "
+	"bdf %!bupdate -v "
+	"BDF %!bupdate -o "
+
+11	"VZPATH",20,0
+
+12	"属性の変更",11,5 "Read only" "Hidden" "System" "Archive" "OK"
+
+13	"",15,8
+	"C コピー	%!zcopy %[/s] %@1 %2%G"
+	"M 移動		%!zcopy %[/s] /m %@1 %2%G"
+	"D 削除"	,#D
+	"R 名前の変更"	,#R
+	"A 属性の変更"	,#A
+	"K ﾃﾞｨﾚｸﾄﾘ作成"	,#K
+	"N 新規ﾌｧｲﾙ作成",#N
+	"F ＦｉlＭｔｎ	%!%^FILMTN"
+;	"F ＦＤ		%!%^FD"
+
+* M マクロ
+
+1 "!Filer"
+	(r)??.
+	(r==':'||r=='L')? r='D',
+	r[, &Fm(r) (r>=0)? {
+		 sp+=2, (r)>?{ #F #L #M #P #S #V #W #+ #> #< #O #E }
+	}
+	r], (r)>!{
+;	L	#L	;Drive
+;	M	#M	;Mask
+;	P	#P	;Path
+;	S	#S	;Sort
+;	V	#V	;View
+;	W	#W	;Window
+;	A	#+	;All
+;	T	#>	;Trcd
+;	R	#<	;Retcd
+;	O	#O	;cOmpare
+;	E	#E	;Exec menu
+;	F	#F	;File menu
+;		#!	;Exec command
+	X	>X	;eXec
+	H	#H	;sHell
+;		#-	;cancel
+;		#*	;*.*
+;		#/	;root
+#if FMRH FMRM TOWNS FM16B
+	.	#94	;parent
+#endif
+	@	#Q	;vzpath
+;	A	#A	;attribute
+;	D	#D	;delete
+	R	#R	;rename
+	K	#K	;makedir
+	N	#N	;new file
+;	C	>C	;Copy
+	}.
+:C	pm="zcopy %@ %2", #!
+:X	pm="%1 %2", #!
+
+* O オプション
+
+FM7			;ファイラーのモード
+			;(+1=Space, +2=Exec menu, +4=Dos Box +8=Rotate)
+FW1024			;ディレクトリバッファの数
+FV1			;ディレクトリ表示モード (1=ロング, 5=ショート)
+FS0			;ディレクトリソートオプション (b0..b6)
+FO3			;ディレクトリコンペアオプション (b0..b4)
+
+* E その他
+
+4 	File  Drive  Mask  Path  Sort  View  Window  All  ToCD  RetCD  Compare  Exec
+#if 98
+13	"$(03,01,04,05,06,07)"
+#elseif FMRH FMRM TOWNS FM16B
+13	"$(03,01,04,05,06,07,02,07)"
+;	   │ │ │ │ │ │ │ └── Non-Archive
+;	   │ │ │ │ │ │ └── Volume Label
+;	   │ │ │ │ │ └── Normal
+;	   │ │ │ │ └── Binary (*)
+;	   │ │ │ └── Directory
+;	   │ │ └── Read only
+;	   │ └── Hidden
+;	   └── System
+#elseif J31
+13	"$(00,00,00,00,00,00)"
+#else
+13	"$(1D,19,1C,1B,1E,1F)"
+#endif
+
+;======== End of vzfl.def ========
+

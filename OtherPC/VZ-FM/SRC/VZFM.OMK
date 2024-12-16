@@ -1,0 +1,58 @@
+ main.obj vz.inc main.asm dummy
+main /ml;
+ alias.obj vzorg.inc alias.asm
+alias /ml;
+ char.obj vzorg.inc char.asm
+char /ml;
+ core.obj vz.inc core.asm dummy
+core /ml;
+ disp.obj vz.inc disp.asm dummy
+disp /ml;
+ dos.obj vz.inc dos.asm dummy
+dos /ml;
+ expr.obj vz.inc expr.asm
+expr /ml;
+ filer.obj vz.inc filer.asm dummy
+filer /ml;
+ gets.obj vzorg.inc gets.asm
+gets /ml;
+ harderr.obj vz.inc harderr.asm
+harderr /ml;
+ inst.obj vz.inc inst.asm dummy
+inst /ml;
+ key.obj vz.inc key.asm keyfm.asm dummy
+key /ml;
+ ledit.obj vzorg.inc ledit.asm
+ledit /ml;
+ macro.obj vz.inc macro.asm dummy
+macro /ml;
+ memo.obj vzorg.inc memo.asm dummy
+memo /ml;
+ menu.obj vzorg.inc menu.asm
+menu /ml;
+ misc.obj vzorg.inc misc.asm
+misc /ml;
+ open.obj vz.inc open.asm
+open /ml;
+ printf.obj vzorg.inc sprintf.inc printf.asm
+printf /ml;
+ scrn.obj vz.inc scrn.asm scrnfm.asm dummy
+scrn /ml;
+ smooth.obj vz.inc smooth.asm dummy
+smooth /ml;
+ string.obj vz.inc string.asm
+string /ml;
+ text.obj vzorg.inc text.asm dummy
+text /ml;
+ view.obj vzorg.inc view.asm
+view /ml;
+ wind.obj vzorg.inc wind.asm
+wind /ml;
+ xscr.obj vz.inc xscr.asm dummy
+xscr /ml;
+ swap.obj vzorg.inc swap.asm
+swap /ml;
+ ems.obj vz.inc ems.asm
+ems /ml;
+ msg.obj vz.inc msg.asm dummy
+msg /ml;
