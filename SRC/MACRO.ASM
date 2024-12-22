@@ -128,7 +128,7 @@ _mget		ends
 	extrn	scantbl		:near
 	extrn	dispmsg		:near
 	extrn	scan_flcmd	:near
-	extrn	flsyscall	:near
+;	extrn	flsyscall	:near
 	extrn	load_iniopt	:near
 	extrn	reset_histp	:near
 	extrn	open_ext	:near

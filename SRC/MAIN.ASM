@@ -140,7 +140,7 @@ refp	macro	label
 	extrn	write_logtbl	:near
 	extrn	set_insm	:near
 	extrn	init_maclink	:near
-	extrn	init_module	:near
+;	extrn	init_module	:near
 	extrn	set_opnopt	:near
 	extrn	set_blktgt	:near
 	extrn	check_vwx	:near
