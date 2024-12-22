@@ -7,7 +7,7 @@
 ;--- External symbols ---
 
 	wseg
-	extrn	altsize		:byte
+;	extrn	altsize		:byte
 	extrn	atrtbl		:byte
 	extrn	atrucsr		:byte
 	extrn	atrflag		:byte
@@ -48,7 +48,9 @@ ENDIF
 	extrn	optputs		:near
 	extrn	toupper		:near
 	extrn	resetfp		:near
+IFDEF PC98
 	extrn	sm_sensekey	:near
+ENDIF
 
 	dseg
 

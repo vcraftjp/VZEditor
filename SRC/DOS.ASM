@@ -64,7 +64,7 @@ _pblk		ends
 	extrn	stopintnum	:word
 	extrn	stops		:word
 	extrn	syssw		:word
-	extrn	texts		:word
+;	extrn	texts		:word
 	extrn	tmpbuf		:word
 ;	extrn	tmpbuf2		:word
 	extrn	parbuf		:near	; ##156.96
@@ -90,7 +90,7 @@ _pblk		ends
 	extrn	xmem_close	:near
 	extrn	xmem_extend	:near
 	extrn	tmp_close	:near
-	extrn	ems_free	:near
+;	extrn	ems_free	:near
 	extrn	ems_resetmap	:near
 	extrn	ems_restore	:near
 	extrn	ems_save	:near

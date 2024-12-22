@@ -19,7 +19,7 @@
 	extrn	w_back		:word
 	endws
 
-	extrn	chkdosheight	:near
+;	extrn	chkdosheight	:near
 	extrn	chkline1	:near
 	extrn	clrbtm		:near
 	extrn	cls		:near

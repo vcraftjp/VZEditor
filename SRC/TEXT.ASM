@@ -42,7 +42,7 @@ ENDIF
 	extrn	rends		:word
 	extrn	syssw		:word
 	extrn	tbsize		:word
-	extrn	tmpnamep	:word
+;	extrn	tmpnamep	:word
 	extrn	w_busy		:word
 	extrn	w_free		:word
 	extrn	tmpslot		:word
@@ -70,7 +70,7 @@ ENDIF
 	extrn	initblk		:near
 	extrn	isviewmode	:near
 	extrn	jumpnum		:near
-	extrn	killmemtmp	:near
+;	extrn	killmemtmp	:near
 	extrn	ld_wact		:near
 	extrn	makefulpath	:near
 	extrn	maptext		:near
@@ -79,7 +79,7 @@ ENDIF
 	extrn	ofs2seg		:near
 	extrn	parsepath	:near
 	extrn	ptradj		:near
-	extrn	readmemtmp	:near
+;	extrn	readmemtmp	:near
 	extrn	restcp		:near
 	extrn	scannum		:near
 	extrn	searchfile	:near
@@ -109,7 +109,7 @@ ENDIF
 	extrn	wndsel		:near
 	extrn	wrdcpy		:near
 	extrn	wrdicmp		:near
-	extrn	writememtmp	:near
+;	extrn	writememtmp	:near
 	extrn	xmem_alloc	:near
 	extrn	xmem_free	:near
 	extrn	xmem_read	:near
